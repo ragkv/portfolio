@@ -1,6 +1,6 @@
 # Career Intelligence Platform
 
-A **local-first, evidence-grounded career-intelligence engine** — upload a résumé, paste a job description, and get an honest, *cited* skill-gap report in seconds, without your résumé ever leaving your machine.
+Instead of hopping between job portals to hunt for roles, **Career Intelligence Platform** is a personal platform that brings the *right* roles to you — the ones that genuinely fit, whether you're ready for them today or aiming to transition into them next. And it sharpens over time: by learning from your career progress, it builds an evolving **career DNA** that drives better role suggestions and more targeted preparation at every step.
 
 | | |
 |---|---|
