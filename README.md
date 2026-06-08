@@ -1,6 +1,8 @@
 # Career Intelligence Platform
 
-Instead of hopping between job portals to hunt for roles, **Career Intelligence Platform** is a personal platform that brings the *right* roles to you — the ones that genuinely fit, whether you're ready for them today or aiming to transition into them next. And it sharpens over time: by learning from your career progress, it builds an evolving **career DNA** that drives better role suggestions and more targeted preparation at every step.
+This is a tool I built for my own job hunt. Plenty of platforms probably do pieces of this already, but I wanted one that works the way I think: a single local space that gathers the roles that suit me, lets me check my résumé against each job description to see if the role fits, apply when I'm interested, and track my interview prep and progress without juggling a dozen tabs.
+
+The more I use it, the more it learns from my career history, building up a kind of career DNA that makes its suggestions feel tailored to me. When a role I want isn't quite a fit yet, it lays out a focused learning path to close the gap. And since I'm paying for it myself, it leans on my own machine and stays under a strict monthly budget, so it costs me next to nothing to run.
 
 | | |
 |---|---|
