@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Career Intelligence Platform · Case Study</title>
+<!--
+  ════════════════════════════════════════════════════════════════════════
+  HOW TO USE THIS TEMPLATE
+  • Every screen below shows a high-fidelity SIMULATED screenshot (pure HTML/CSS),
+    so it works with ZERO app setup. Open this file in a browser to see the tour.
+  • To swap in a REAL screenshot later, drop a PNG into showcase/screenshots/ named:
+      home.png · gap-analysis.png · coach.png · star-search.png
+      pipeline.png · market-intel.png · usage-budget.png
+    It auto-replaces the simulated one (no code change).
+  • Edit the <h3>, <p>, "Engineering" line, and REPO_URL / DEMO_URL to taste.
+  • Host on GitHub Pages to share a single link.
+  ════════════════════════════════════════════════════════════════════════
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0B1120;--panel:#131A2A;--panel2:#1B2333;--line:#2A3344;
+  --text:#E6EAF2;--text2:#9AA7BD;--text3:#6B7689;
+  --blue:#60A5FA;--teal:#2DD4BF;--amber:#FBBF24;--purple:#A78BFA;--green:#4ADE80;--red:#F87171;--orange:#FB923C;
+  --grad:linear-gradient(135deg,#4F46E5 0%,#7C3AED 55%,#2563EB 100%);
+  --sans:'Plus Jakarta Sans',ui-sans-serif,system-ui,-apple-system,Arial,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+body{font-family:var(--sans);background:
+  radial-gradient(1100px 520px at 100% -5%,rgba(124,58,237,.10),transparent 60%),
+  radial-gradient(900px 480px at -10% 8%,rgba(37,99,235,.10),transparent 55%),var(--bg);
+  color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+a{color:var(--blue);text-decoration:none}
+
+.hero{padding:64px 0 36px;text-align:center}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin-bottom:14px}
+.hero h1{font-size:40px;font-weight:800;letter-spacing:-1px;line-height:1.1}
+.hero h1 .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.tag{font-size:17px;color:var(--text2);max-width:680px;margin:16px auto 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:22px auto 0;max-width:760px}
+.chip{font-family:var(--mono);font-size:11px;font-weight:600;color:var(--text2);background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:6px 12px}
+.cta{display:flex;gap:12px;justify-content:center;margin-top:26px;flex-wrap:wrap}
+.btn{border-radius:10px;padding:11px 20px;font-size:14px;font-weight:700;cursor:pointer;font-family:var(--sans);border:1px solid var(--line)}
+.btn.primary{background:var(--grad);color:#fff;border:none}
+.btn.ghost{background:var(--panel);color:var(--text)}
+.pitch{margin:34px auto 0;max-width:820px;background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--purple);border-radius:12px;padding:16px 20px;font-size:15px;color:var(--text)}
+.pitch b{color:var(--purple)}
+
+.section-h{font-family:var(--mono);font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin:0 0 18px}
+.arch{margin:60px 0}
+.layers{display:flex;flex-wrap:wrap;align-items:center;gap:8px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px}
+.layer{flex:1;min-width:120px;text-align:center;background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:12px 8px}
+.layer .ln{font-size:13px;font-weight:700}.layer .ls{font-family:var(--mono);font-size:10px;color:var(--text3);margin-top:3px}
+.arrow{color:var(--text3);font-weight:700}
+.router{display:flex;gap:10px;margin-top:12px;flex-wrap:wrap}
+.rcard{flex:1;min-width:200px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.rcard .rt{font-size:13px;font-weight:700;margin-bottom:3px}.rcard .rd{font-size:12px;color:var(--text2)}
+.rcard.local{border-left:3px solid var(--teal)}.rcard.cloud{border-left:3px solid var(--blue)}
+
+.screens{margin:56px 0 30px}
+.screen{display:grid;grid-template-columns:1.3fr 1fr;gap:28px;align-items:center;margin-bottom:60px}
+.screen:nth-child(even){grid-template-columns:1fr 1.3fr}
+.screen:nth-child(even) .frame{order:2}
+.frame{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 22px 55px rgba(0,0,0,.45)}
+.frame-bar{display:flex;align-items:center;gap:8px;padding:9px 12px;background:var(--panel2);border-bottom:1px solid var(--line)}
+.dot{width:10px;height:10px;border-radius:50%}.d1{background:#ff5f57}.d2{background:#febc2e}.d3{background:#28c840}
+.frame-bar .url{font-family:var(--mono);font-size:10px;color:var(--text3);margin-left:6px}
+.shot{display:block;width:100%;height:auto}
+.mock{display:none}
+.caption .num{font-family:var(--mono);font-size:13px;font-weight:600;color:var(--purple)}
+.caption h3{font-size:22px;font-weight:800;letter-spacing:-.4px;margin:6px 0 8px}
+.caption p{font-size:14.5px;color:var(--text2)}
+.eng{margin-top:12px;font-size:12.5px;color:var(--text);background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:9px 12px}
+.eng b{color:var(--teal)}
+footer{border-top:1px solid var(--line);margin-top:40px;padding:30px 0 60px;text-align:center;color:var(--text3);font-size:13px}
+
+/* ── simulated-screen toolkit ─────────────────────────────── */
+.scr{padding:14px;background:var(--bg)}
+.scr-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.scr-h{font-size:15px;font-weight:800}.scr-h .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.scr-sub{font-size:10px;color:var(--text3)}
+.pill{font-family:var(--mono);font-size:9px;font-weight:700;padding:3px 9px;border-radius:20px}
+.panel-c{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px;margin-bottom:10px}
+.pl{font-family:var(--mono);font-size:9px;letter-spacing:1px;text-transform:uppercase;color:var(--text3);margin-bottom:9px}
+.row{display:flex;align-items:center;gap:9px;padding:7px 0;border-bottom:1px solid var(--line)}.row:last-child{border-bottom:0}
+.row .nm{flex:1;font-size:12px;font-weight:600}.row .ct{font-size:10px;color:var(--text3)}
+.bar{width:78px;height:5px;background:var(--panel2);border-radius:3px;overflow:hidden;flex-shrink:0}.bar i{display:block;height:100%;border-radius:3px}
+.badge{font-family:var(--mono);font-size:8px;font-weight:700;padding:2px 7px;border-radius:10px;white-space:nowrap}
+.grid3{display:flex;gap:8px}.grid3>*{flex:1}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:10px}
+.kpi b{display:block;font-size:18px;letter-spacing:-.5px}.kpi span{font-size:8px;font-family:var(--mono);text-transform:uppercase;color:var(--text3)}
+/* home hero */
+.hbox{background:linear-gradient(135deg,#0F172A,#312E81 60%,#1E3A8A);border-radius:10px;padding:14px;margin-bottom:10px}
+.hbox .h{font-size:16px;font-weight:800;color:#fff}.hbox .h span{color:#FDE68A}.hbox .s{font-size:10px;color:rgba(255,255,255,.6);margin-top:2px}
+.hstat{display:flex;gap:8px;margin-top:11px}
+.hstat>div{flex:1;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:8px;text-align:center}
+.hstat b{display:block;font-size:17px;color:#fff}.hstat span{font-size:7px;font-family:var(--mono);color:rgba(255,255,255,.5);text-transform:uppercase}
+.jc{flex:1;background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:10px}
+.jc .co{font-size:12px;font-weight:800}.jc .ro{font-size:10px;color:var(--text3);margin-bottom:7px}
+.jc .ft{display:flex;justify-content:space-between;align-items:center}
+/* chat */
+.bub{max-width:84%;border-radius:11px;padding:9px 12px;font-size:11.5px;margin-bottom:8px;line-height:1.45}
+.bub.u{margin-left:auto;background:rgba(167,139,250,.18);border:1px solid rgba(167,139,250,.34)}
+.bub.a{background:var(--panel);border:1px solid var(--line)}
+.trace{font-family:var(--mono);font-size:9px;color:var(--purple);margin-top:7px;border-top:1px solid var(--line);padding-top:6px}
+.trace div{padding:1px 0;color:var(--text2)}.trace b{color:var(--purple)}
+.search{display:flex;gap:8px;margin-bottom:10px}
+.search input{flex:1;background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:9px 11px;font-size:11px;color:var(--text2)}
+.search .b{background:var(--purple);color:#fff;border-radius:8px;padding:9px 15px;font-size:11px;font-weight:700}
+/* kanban */
+.kan{display:flex;gap:6px;margin-bottom:9px}
+.kcol{flex:1;border-radius:8px;padding:7px 6px}
+.kcol .kh{font-size:9px;font-weight:800;display:flex;justify-content:space-between;margin-bottom:6px}
+.kcard{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:6px;font-size:8px;color:var(--text2);margin-bottom:4px}
+/* market tabs */
+.tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px}
+.tab{font-size:10px;border:1px solid var(--line);border-radius:14px;padding:4px 10px;color:var(--text2)}.tab.on{background:var(--blue);color:#fff;border-color:var(--blue)}
+.mkbar{display:flex;align-items:flex-end;gap:5px;height:54px;margin-top:8px}
+.mkbar i{flex:1;background:var(--grad);border-radius:3px 3px 0 0;opacity:.85}
+
+@media(max-width:780px){.screen,.screen:nth-child(even){grid-template-columns:1fr}.screen:nth-child(even) .frame{order:0}.hero h1{font-size:30px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <div class="eyebrow">Personal Project · AI Engineering</div>
+    <h1>Career Intelligence <span class="g">Platform</span></h1>
+    <p class="tag">A local-first, multi-agent LLM platform that scores your resume against a job with evidence-backed gap analysis, then helps you close the gaps. Built the way I build backend systems, not the way demos are built.</p>
+    <p style="font-family:var(--mono);font-size:12px;color:var(--text3);margin-top:8px">Mapped against: Full Stack Developer III · AI Engineer — FedEx, Plano TX</p>
+    <div class="chips">
+      <span class="chip">Python 3.14</span><span class="chip">FastAPI</span><span class="chip">LangGraph</span>
+      <span class="chip">Ollama</span><span class="chip">Claude</span><span class="chip">OpenAI</span>
+      <span class="chip">PostgreSQL · pgvector</span><span class="chip">Vanilla JS</span><span class="chip">GitHub Actions CI</span>
+    </div>
+    <div class="pitch">A local-first, multi-agent platform that turns a resume and a job description into an evidence-backed readiness assessment, then guides the work to close the gaps. The emphasis is production discipline around the model: <b>every output is schema-validated and treated as untrusted, private data never leaves the device, spend is capped per request with automatic fallback, a human stays in the scoring loop, and agent autonomy is reserved for genuinely open-ended work.</b></div>
+  </header>
+
+  <section class="arch">
+    <div class="section-h">Layered AI architecture · strict one-way dependencies</div>
+    <div class="layers">
+      <div class="layer"><div class="ln">Frontend</div><div class="ls">vanilla JS</div></div><div class="arrow">→</div>
+      <div class="layer"><div class="ln">API</div><div class="ls">FastAPI</div></div><div class="arrow">→</div>
+      <div class="layer"><div class="ln">Services</div><div class="ls">orchestration</div></div><div class="arrow">→</div>
+      <div class="layer" style="border-color:var(--purple)"><div class="ln" style="color:var(--purple)">Agents · Repositories</div><div class="ls">LangGraph + LLM router · pgvector</div></div><div class="arrow">→</div>
+      <div class="layer"><div class="ln">Domain</div><div class="ls">models</div></div>
+    </div>
+    <div style="font-size:12.5px;color:var(--text2);margin-top:12px;line-height:1.6">The AI lives in a dedicated <b style="color:var(--purple)">Agents</b> tier — LangGraph pipelines plus a sensitivity-aware LLM router — sitting alongside the data layer. Everything around it is conventional clean architecture: each layer depends only inward, with no cycles, so the model stays a swappable component rather than the application.</div>
+    <div class="router">
+      <div class="rcard local"><div class="rt">🔒 Local model (Ollama)</div><div class="rd">Resume parsing and anything with personal data. Enforced at the call site, never leaves the machine.</div></div>
+      <div class="rcard cloud"><div class="rt">☁ Cloud models (Claude / OpenAI)</div><div class="rd">De-identified reasoning only. Per-request tier selection, hard budget cap, automatic local fallback.</div></div>
+      <div class="rcard" style="border-left:3px solid var(--purple)"><div class="rt">🧑 Human-in-the-loop</div><div class="rd">Your self-assessment recalibrates the AI's skill scores, and any score can be overridden by hand — the human stays in the decision loop.</div></div>
+    </div>
+  </section>
+
+  <section class="screens">
+    <div class="section-h">Screens · simulated</div>
+
+    <!-- 01 HOME -->
+    <article class="screen">
+      <div class="frame"><div class="frame-bar"><span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span><span class="url">localhost:8000 · Home</span></div>
+        <img class="shot" src="screenshots/home.png" alt="Home" onerror="this.style.display='none';this.parentElement.querySelector('.mock').style.display='block'">
+        <div class="mock"><div class="scr">
+          <div class="hbox"><div class="h">Good morning, <span>Raghava</span> 👋</div><div class="s">2 active applications · FedEx interview in 8 days</div>
+            <div class="hstat"><div><b>2</b><span>Active jobs</span></div><div><b>70%</b><span>Best fit</span></div><div><b>8d</b><span>Next interview</span></div></div></div>
+          <div class="grid3" style="margin-bottom:10px">
+            <div class="jc"><div class="co">FedEx</div><div class="ro">Full Stack Developer III, AI Engineer</div><div class="ft"><b style="color:var(--teal);font-size:15px">70%</b><span class="badge" style="background:rgba(167,139,250,.18);color:var(--purple)">Interviewing</span></div></div>
+            <div class="jc"><div class="co">Capital One</div><div class="ro">Full Stack Engineer, AI</div><div class="ft"><b style="color:var(--amber);font-size:15px">64%</b><span class="badge" style="background:rgba(96,165,250,.18);color:var(--blue)">Applied</span></div></div></div>
+          <div class="panel-c" style="margin:0"><div class="pl">Skill progress · this week</div>
+            <div class="row"><span class="nm">React</span><span class="bar"><i style="width:30%;background:var(--red)"></i></span><span class="ct">2 → 3</span></div>
+            <div class="row"><span class="nm">Python</span><span class="bar"><i style="width:60%;background:var(--amber)"></i></span><span class="ct">5 → 6</span></div>
+            <div class="row"><span class="nm">Agentic AI</span><span class="bar"><i style="width:85%;background:var(--teal)"></i></span><span class="ct">7 → 8</span></div></div>
+        </div></div>
+      </div>
+      <div class="caption"><div class="num">01</div><h3>Home dashboard</h3><p>A command center for the whole search: active applications, readiness, the next interview, and weekly skill momentum, with system-aware dark mode.</p>
+        <div class="eng"><b>Engineering:</b> vanilla ES-module frontend, no build step; theme persists with no flash of light mode on load.</div></div>
+    </article>
+
+    <!-- 02 GAP ANALYSIS -->
+    <article class="screen">
+      <div class="frame"><div class="frame-bar"><span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span><span class="url">localhost:8000 · Gap Analysis</span></div>
+        <img class="shot" src="screenshots/gap-analysis.png" alt="Gap analysis" onerror="this.style.display='none';this.parentElement.querySelector('.mock').style.display='block'">
+        <div class="mock"><div class="scr">
+          <div class="scr-top"><div><div class="scr-h">Skill Gap Report</div><div class="scr-sub">FedEx · Full Stack Developer III, AI Engineer</div></div><span class="pill" style="background:rgba(45,212,191,.18);color:var(--teal)">70% READY</span></div>
+          <div class="panel-c">
+            <div class="row"><span class="nm">React / Angular <span class="ct">· Front-end</span></span><span class="bar"><i style="width:30%;background:var(--red)"></i></span><span style="font-family:var(--mono);font-size:10px;width:28px">3/10</span><span class="badge" style="background:rgba(248,113,113,.18);color:var(--red)">Critical</span></div>
+            <div class="row"><span class="nm">Node.js <span class="ct">· Back-end</span></span><span class="bar"><i style="width:40%;background:var(--red)"></i></span><span style="font-family:var(--mono);font-size:10px;width:28px">4/10</span><span class="badge" style="background:rgba(248,113,113,.18);color:var(--red)">Critical</span></div>
+            <div class="row"><span class="nm">Python <span class="ct">· Back-end</span></span><span class="bar"><i style="width:60%;background:var(--amber)"></i></span><span style="font-family:var(--mono);font-size:10px;width:28px">6/10</span><span class="badge" style="background:rgba(251,191,36,.18);color:var(--amber)">Moderate</span></div>
+            <div class="row"><span class="nm">Vector databases <span class="ct">· AI</span></span><span class="bar"><i style="width:80%;background:var(--green)"></i></span><span style="font-family:var(--mono);font-size:10px;width:28px">8/10</span><span class="badge" style="background:rgba(74,222,128,.18);color:var(--green)">Strong</span></div>
+            <div class="row"><span class="nm">RESTful APIs <span class="ct">· Back-end</span></span><span class="bar"><i style="width:90%;background:var(--teal)"></i></span><span style="font-family:var(--mono);font-size:10px;width:28px">9/10</span><span class="badge" style="background:rgba(45,212,191,.18);color:var(--teal)">Strong</span></div></div>
+          <div class="panel-c" style="margin:0"><div class="pl">Verified · Advocate / Skeptic / Judge debate</div><div style="font-size:11px;color:var(--text2)">React / Angular confirmed Critical after 2 rounds · consensus 3/10 · "no front-end framework evidence found in profile"</div></div>
+        </div></div>
+      </div>
+      <div class="caption"><div class="num">02</div><h3>Evidence-based gap analysis</h3><p>Scores your resume against a job description skill by skill. Every score must cite evidence from your real history. No evidence, no claim.</p>
+        <div class="eng"><b>Engineering:</b> a LangGraph pipeline with Pydantic-validated output; an Advocate / Skeptic / Judge debate re-checks critical gaps, and the model itself decides how many rounds to run.</div></div>
+    </article>
+
+    <!-- 03 COACH -->
+    <article class="screen">
+      <div class="frame"><div class="frame-bar"><span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span><span class="url">localhost:8000 · Career Coach</span></div>
+        <img class="shot" src="screenshots/coach.png" alt="Career coach" onerror="this.style.display='none';this.parentElement.querySelector('.mock').style.display='block'">
+        <div class="mock"><div class="scr">
+          <div class="scr-top"><div class="scr-h">🧠 Career <span class="g">Coach</span></div><span class="pill" style="background:var(--panel);color:var(--text2);border:1px solid var(--line)">Claude Haiku · tools</span></div>
+          <div class="bub u">How do I close my biggest gap for the FedEx Full Stack Developer III, AI Engineer role?</div>
+          <div class="bub a">Your largest gap is <b>React / front-end (3/10, Critical)</b>. You're strong on agentic AI and RESTful APIs, so here's a focused 2-week React + human-in-the-loop UI plan that builds on your backend strengths…
+            <div class="trace">🔧 3 tool calls
+              <div><b>get_gap_report</b>(job_id: fedex-fs-ai)</div>
+              <div><b>market_context</b>(skill: React)</div>
+              <div><b>get_learning_plan</b>(job_id: fedex-fs-ai)</div></div></div>
+        </div></div>
+      </div>
+      <div class="caption"><div class="num">03</div><h3>Career Coach — a real agent</h3><p>Ask anything about your own data. The agent decides which tools to call (your gap reports, live market data, your STAR stories) and stops when it can answer. The tool-call trace is shown so you can see it reason.</p>
+        <div class="eng"><b>Engineering:</b> a ReAct agent over a real tool belt. Genuine autonomy is reserved for this open-ended surface, while the analysis pipeline stays deterministic on purpose.</div></div>
+    </article>
+
+    <!-- 04 STAR SEARCH -->
+    <article class="screen">
+      <div class="frame"><div class="frame-bar"><span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span><span class="url">localhost:8000 · STAR Stories</span></div>
+        <img class="shot" src="screenshots/star-search.png" alt="STAR search" onerror="this.style.display='none';this.parentElement.querySelector('.mock').style.display='block'">
+        <div class="mock"><div class="scr">
+          <div class="search"><input value="Tell me about a time you owned a production incident"><span class="b">Search</span></div>
+          <div class="pl" style="margin-bottom:8px">Best matches · pgvector cosine similarity</div>
+          <div class="panel-c"><div class="row" style="border:0;padding-bottom:4px"><span class="nm">Kafka outage · on-call ownership</span><span class="badge" style="background:rgba(167,139,250,.18);color:var(--purple)">91%</span></div><div class="bar" style="width:100%"><i style="width:91%;background:var(--purple)"></i></div><div style="font-size:10px;color:var(--text3);margin-top:6px">Led recovery of a Kafka consumer outage affecting 40k shipments; root-caused offset lag…</div></div>
+          <div class="panel-c" style="margin:0"><div class="row" style="border:0;padding-bottom:4px"><span class="nm">Payment retry storm</span><span class="badge" style="background:rgba(167,139,250,.18);color:var(--purple)">78%</span></div><div class="bar" style="width:100%"><i style="width:78%;background:var(--purple)"></i></div></div>
+        </div></div>
+      </div>
+      <div class="caption"><div class="num">04</div><h3>Semantic STAR search</h3><p>Type an interview question and instantly surface your best-matching STAR stories by meaning, not keywords.</p>
+        <div class="eng"><b>Engineering:</b> pgvector cosine similarity over 768-dim embeddings generated locally (Ollama nomic-embed-text). Embeddings never leave the machine.</div></div>
+    </article>
+
+    <!-- 05 PIPELINE -->
+    <article class="screen">
+      <div class="frame"><div class="frame-bar"><span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span><span class="url">localhost:8000 · Pipeline</span></div>
+        <img class="shot" src="screenshots/pipeline.png" alt="Pipeline" onerror="this.style.display='none';this.parentElement.querySelector('.mock').style.display='block'">
+        <div class="mock"><div class="scr">
+          <div class="scr-top"><div class="scr-h">Job Pipeline</div><span class="pill" style="background:var(--panel);color:var(--text2);border:1px solid var(--line)">+ Add Job</span></div>
+          <div class="kan">
+            <div class="kcol" style="background:var(--panel2)"><div class="kh" style="color:var(--text2)">Draft <span>1</span></div><div class="kcard">USAA · AI App Eng</div></div>
+            <div class="kcol" style="background:rgba(251,191,36,.12)"><div class="kh" style="color:var(--amber)">Analyzing <span>1</span></div><div class="kcard">Capital One · FS AI</div></div>
+            <div class="kcol" style="background:rgba(96,165,250,.12)"><div class="kh" style="color:var(--blue)">Applied <span>1</span></div><div class="kcard">Verizon · Agentic AI</div></div>
+            <div class="kcol" style="background:rgba(167,139,250,.12)"><div class="kh" style="color:var(--purple)">Interview <span>1</span></div><div class="kcard">FedEx · FS Dev III AI</div></div>
+            <div class="kcol" style="background:rgba(74,222,128,.12)"><div class="kh" style="color:var(--green)">Offer <span>0</span></div></div></div>
+          <div class="panel-c" style="margin:0;font-size:11px;color:var(--text2)">Drag cards to move stages · bulk select to archive or delete</div>
+        </div></div>
+      </div>
+      <div class="caption"><div class="num">05</div><h3>Application pipeline</h3><p>Track every application across stages from draft to offer, with drag-to-move and bulk actions.</p>
+        <div class="eng"><b>Engineering:</b> crash-safe persistence — every write is temp file, fsync, atomic rename, so a power cut never corrupts your data.</div></div>
+    </article>
+
+    <!-- 06 MARKET INTEL -->
+    <article class="screen">
+      <div class="frame"><div class="frame-bar"><span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span><span class="url">localhost:8000 · Market Intel</span></div>
+        <img class="shot" src="screenshots/market-intel.png" alt="Market intel" onerror="this.style.display='none';this.parentElement.querySelector('.mock').style.display='block'">
+        <div class="mock"><div class="scr">
+          <div class="tabs"><span class="tab on">🇺🇸 US</span><span class="tab">🤠 Texas</span><span class="tab">🏠 Remote</span></div>
+          <div class="grid3" style="margin-bottom:10px"><div class="kpi"><b>70%</b><span>Your fit</span></div><div class="kpi"><b>8,200+</b><span>AI roles</span></div><div class="kpi"><b>$145k</b><span>Median USD</span></div></div>
+          <div class="panel-c" style="margin:0"><div class="pl">Skill demand · US AI market</div>
+            <div class="row"><span class="nm">React / Front-end</span><span class="bar"><i style="width:85%;background:var(--blue)"></i></span><span class="badge" style="background:rgba(96,165,250,.18);color:var(--blue)">↑ 35%</span></div>
+            <div class="row"><span class="nm">Python</span><span class="bar"><i style="width:90%;background:var(--blue)"></i></span><span class="badge" style="background:rgba(96,165,250,.18);color:var(--blue)">↑ 45%</span></div>
+            <div class="row"><span class="nm">Agentic AI tools</span><span class="bar"><i style="width:95%;background:var(--blue)"></i></span><span class="badge" style="background:rgba(96,165,250,.18);color:var(--blue)">↑ 88%</span></div>
+            <div class="row"><span class="nm">RESTful APIs</span><span class="bar"><i style="width:75%;background:var(--teal)"></i></span><span class="badge" style="background:rgba(45,212,191,.18);color:var(--teal)">Stable</span></div></div>
+        </div></div>
+      </div>
+      <div class="caption"><div class="num">06</div><h3>Market intelligence</h3><p>Compare AI/ML hiring across seven regions: demand, salary, and how your profile fits each market.</p>
+        <div class="eng"><b>Engineering:</b> a tool the scoring agent can call at runtime for live salary and demand, with a static baseline as fallback. Only skill names are queried, never personal data.</div></div>
+    </article>
+
+    <!-- 07 USAGE & BUDGET -->
+    <article class="screen">
+      <div class="frame"><div class="frame-bar"><span class="dot d1"></span><span class="dot d2"></span><span class="dot d3"></span><span class="url">localhost:8000 · Usage &amp; Budget</span></div>
+        <img class="shot" src="screenshots/usage-budget.png" alt="Usage and budget" onerror="this.style.display='none';this.parentElement.querySelector('.mock').style.display='block'">
+        <div class="mock"><div class="scr">
+          <div class="scr-top"><div class="scr-h">💳 Usage &amp; <span class="g">Budget</span></div><span class="scr-sub">June 2026</span></div>
+          <div class="grid3" style="margin-bottom:10px"><div class="kpi"><b>$0.47</b><span>of $2.00 cap</span></div><div class="kpi"><b>1.62M</b><span>tokens</span></div><div class="kpi"><b>137</b><span>API calls</span></div></div>
+          <div class="panel-c" style="margin-bottom:10px"><div class="pl">Cost by provider</div>
+            <div class="row"><span style="width:9px;height:9px;border-radius:2px;background:var(--orange)"></span><span class="nm">Claude Sonnet 4</span><span class="ct">41 calls</span><span style="font-family:var(--mono);font-size:11px;font-weight:700;width:48px;text-align:right">$0.298</span></div>
+            <div class="row"><span style="width:9px;height:9px;border-radius:2px;background:var(--blue)"></span><span class="nm">Claude Haiku 4.5</span><span class="ct">52 calls</span><span style="font-family:var(--mono);font-size:11px;font-weight:700;width:48px;text-align:right">$0.103</span></div>
+            <div class="row"><span style="width:9px;height:9px;border-radius:2px;background:var(--green)"></span><span class="nm">GPT-4o</span><span class="ct">11 calls</span><span style="font-family:var(--mono);font-size:11px;font-weight:700;width:48px;text-align:right">$0.057</span></div>
+            <div class="row"><span style="width:9px;height:9px;border-radius:2px;background:var(--teal)"></span><span class="nm">Ollama · local</span><span class="ct">63 calls</span><span style="font-family:var(--mono);font-size:11px;font-weight:700;width:48px;text-align:right;color:var(--teal)">$0.00</span></div></div>
+          <div class="panel-c" style="margin:0"><div class="pl">Daily spend · last 14 days</div><div class="mkbar"><i style="height:25%"></i><i style="height:5%"></i><i style="height:50%"></i><i style="height:65%"></i><i style="height:30%"></i><i style="height:8%"></i><i style="height:80%"></i><i style="height:55%"></i><i style="height:40%"></i><i style="height:92%"></i><i style="height:35%"></i><i style="height:60%"></i><i style="height:72%"></i><i style="height:48%"></i></div></div>
+        </div></div>
+      </div>
+      <div class="caption"><div class="num">07</div><h3>Usage &amp; budget</h3><p>Every LLM and external API call, in dollars and tokens, broken down per provider, under a hard monthly cap.</p>
+        <div class="eng"><b>Engineering:</b> spend is checked before each paid call; on the cap, calls fall back to the free local model instead of failing. Real cost runs about $0 to $1 per month.</div></div>
+    </article>
+
+  </section>
+
+  <footer>
+    Built by Raghava Kundavajjala<br>
+    <span style="font-family:var(--mono);font-size:11px">Local-first · evidence-mandatory · cost-bounded · agency only where it earns its cost</span>
+  </footer>
+
+</div>
+</body>
+</html>

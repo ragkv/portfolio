@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Career Intelligence Platform — System Design (animated)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0e1a; --surface:#111a2c; --surface2:#18233a; --line:#243049; --line2:#33425f;
+  --text:#e9eef8; --text2:#9fadc7; --text3:#62718f;
+  --teal:#2dd4bf; --purple:#a78bfa; --blue:#60a5fa; --amber:#fbbf24; --green:#4ade80; --red:#f87171; --orange:#fb923c;
+  --mono:'JetBrains Mono',ui-monospace,monospace; --sans:'Plus Jakarta Sans',system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:radial-gradient(1300px 700px at 50% -15%,#16223e 0%,var(--bg) 58%);color:var(--text);font-family:var(--sans);min-height:100vh;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1200px;margin:0 auto;padding:20px 22px 64px}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:6px}
+.brand{font-size:13px;font-weight:700;letter-spacing:.3px;color:var(--text2)}
+.brand b{color:var(--text)}
+.navlinks a{font-size:12px;color:var(--text2);text-decoration:none;margin-left:14px;border-bottom:1px solid transparent;padding-bottom:2px}
+.navlinks a:hover{color:var(--text);border-color:var(--line2)}
+h1{font-size:clamp(24px,3.4vw,34px);font-weight:800;letter-spacing:-.6px;margin:10px 0 4px}
+h1 span{background:linear-gradient(90deg,var(--teal),var(--blue),var(--purple));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.sub{font-size:14px;color:var(--text2);max-width:760px;line-height:1.6;margin-bottom:16px}
+
+.board{display:grid;grid-template-columns:1fr 330px;gap:16px;align-items:stretch}
+@media(max-width:920px){.board{grid-template-columns:1fr}}
+
+.stage-wrap{background:linear-gradient(180deg,var(--surface) 0%,#0d1526 100%);border:1px solid var(--line);border-radius:16px;padding:10px;position:relative;overflow:hidden}
+.stage{position:relative;width:100%;aspect-ratio:16/10.5;
+  background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+  background-size:34px 34px;border-radius:11px}
+.lane-tag{position:absolute;font-family:var(--mono);font-size:10px;letter-spacing:.5px;color:var(--text3);text-transform:uppercase}
+.wires{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+.wire{fill:none;stroke:var(--line2);stroke-width:1.6;vector-effect:non-scaling-stroke;opacity:.45}
+.wire.ret{stroke-dasharray:2 4;opacity:.3}
+.wire.flowon{stroke:var(--teal);opacity:.95;stroke-dasharray:5 5;animation:dash .55s linear infinite}
+.beam{fill:none;stroke-width:2;vector-effect:non-scaling-stroke;stroke-dasharray:3 5;opacity:0;transition:opacity .35s}
+.beam.g{stroke:var(--green)} .beam.p{stroke:var(--purple)} .beam.t{stroke:var(--teal)} .beam.a{stroke:var(--amber)}
+.beam.on{opacity:.95;animation:dash .5s linear infinite}
+@keyframes dash{to{stroke-dashoffset:-16}}
+
+.node{position:absolute;transform:translate(-50%,-50%);z-index:2;min-width:104px;background:var(--surface2);border:1px solid var(--line2);border-radius:11px;padding:8px 10px;text-align:center;transition:all .3s ease;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.node .ic{font-size:16px;line-height:1}
+.node .t{font-family:var(--mono);font-size:11px;font-weight:700;margin-top:3px;color:var(--text);white-space:nowrap}
+.node .s{font-size:9.5px;color:var(--text3);margin-top:1px;white-space:nowrap}
+.node.on{border-color:var(--accent,var(--teal));box-shadow:0 0 0 1px var(--accent,var(--teal)),0 0 22px -2px var(--accent,var(--teal));transform:translate(-50%,-50%) scale(1.07);background:#1d2a44}
+.node.on .t{color:#fff}
+.node.lit{border-color:var(--accent);box-shadow:0 0 18px -3px var(--accent);background:#1d2a44}
+.node.dim{opacity:.5}
+.node.fe{--accent:var(--blue)} .node.api{--accent:var(--purple)} .node.svc{--accent:var(--teal)}
+.node.lock{--accent:var(--green)} .node.agt{--accent:var(--blue)} .node.ph3{--accent:var(--amber)}
+.node.router{--accent:var(--purple)} .node.local{--accent:var(--green)} .node.cloud{--accent:var(--blue)} .node.tool{--accent:var(--amber)}
+.node.local .t,.node.lock .t{color:var(--green)}
+.badge-local{position:absolute;top:-7px;right:-7px;font-size:8px;font-family:var(--mono);font-weight:700;background:var(--green);color:#06281a;border-radius:6px;padding:1px 4px}
+
+.packet{position:absolute;width:15px;height:15px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff,var(--teal) 70%);box-shadow:0 0 16px 4px rgba(45,212,191,.85);transform:translate(-50%,-50%);z-index:4;transition:left .75s cubic-bezier(.5,0,.25,1),top .75s cubic-bezier(.5,0,.25,1),background .4s,box-shadow .4s;left:8%;top:12%}
+.packet.cloud{background:radial-gradient(circle at 35% 35%,#fff,var(--purple) 70%);box-shadow:0 0 16px 4px rgba(167,139,250,.85)}
+
+/* narration */
+.narr{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column}
+.step-no{font-family:var(--mono);font-size:11px;color:var(--text3);letter-spacing:1px}
+.narr h2{font-size:18px;font-weight:800;margin:4px 0 8px;letter-spacing:-.3px;line-height:1.25}
+.narr p{font-size:13px;color:var(--text2);line-height:1.65;margin:0 0 14px}
+.adr{margin-top:auto;border-radius:11px;padding:11px 12px;border:1px solid;font-size:12px;line-height:1.5}
+.adr .tag{font-family:var(--mono);font-size:9.5px;font-weight:700;letter-spacing:.6px;display:inline-block;padding:2px 6px;border-radius:5px;margin-bottom:6px}
+.adr b{color:#fff}
+.adr.green{background:rgba(74,222,128,.09);border-color:rgba(74,222,128,.3);color:#a7f3c6} .adr.green .tag{background:var(--green);color:#06281a}
+.adr.red{background:rgba(248,113,113,.09);border-color:rgba(248,113,113,.3);color:#fbb6b6} .adr.red .tag{background:var(--red);color:#3a0d0d}
+.adr.amber{background:rgba(251,191,36,.09);border-color:rgba(251,191,36,.3);color:#fde9b0} .adr.amber .tag{background:var(--amber);color:#3a2a05}
+.adr.purple{background:rgba(167,139,250,.1);border-color:rgba(167,139,250,.32);color:#d6c8fb} .adr.purple .tag{background:var(--purple);color:#241047}
+.adr.teal{background:rgba(45,212,191,.09);border-color:rgba(45,212,191,.3);color:#a9efe5} .adr.teal .tag{background:var(--teal);color:#06302b}
+.adr.blue{background:rgba(96,165,250,.09);border-color:rgba(96,165,250,.3);color:#bcd6fb} .adr.blue .tag{background:var(--blue);color:#0a2547}
+
+/* controls */
+.controls{display:flex;align-items:center;gap:8px;margin:14px 0 8px;flex-wrap:wrap}
+.btn{background:var(--surface2);border:1px solid var(--line2);color:var(--text);font-family:var(--sans);font-size:13px;font-weight:600;padding:8px 13px;border-radius:9px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:.15s}
+.btn:hover{border-color:var(--teal);color:#fff}
+.btn.primary{background:var(--teal);color:#06302b;border-color:var(--teal)}
+.btn.primary:hover{filter:brightness(1.08)}
+.dots{display:flex;gap:7px;margin-left:6px}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--line2);cursor:pointer;transition:.2s}
+.dot.active{background:var(--teal);box-shadow:0 0 8px var(--teal);transform:scale(1.25)}
+.dot.done{background:var(--text3)}
+.speed{margin-left:auto;font-size:12px;color:var(--text3);display:flex;align-items:center;gap:6px}
+.speed select{background:var(--surface2);border:1px solid var(--line2);color:var(--text);border-radius:7px;padding:5px 8px;font-family:var(--sans);font-size:12px;cursor:pointer}
+
+.principles{margin-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.pr{background:var(--surface);border:1px solid var(--line);border-radius:11px;padding:11px 13px}
+.pr .h{font-size:12px;font-weight:700;color:var(--text);display:flex;align-items:center;gap:7px}
+.pr .d{font-size:11px;color:var(--text3);margin-top:4px;line-height:1.5}
+.foot{margin-top:26px;font-size:11px;color:var(--text3);text-align:center;line-height:1.7}
+.foot b{color:var(--text2)}
+.about{font-size:13.5px;color:var(--text2);line-height:1.75;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:15px 17px;margin:2px 0 18px}
+.about b{color:var(--text)}
+.about-links{margin-top:12px;display:flex;gap:9px;flex-wrap:wrap}
+.src-btn{display:inline-flex;align-items:center;gap:6px;background:var(--teal);color:#06302b;font-weight:700;font-size:12.5px;text-decoration:none;padding:8px 13px;border-radius:8px}
+.src-btn.ghost{background:transparent;color:var(--text2);border:1px solid var(--line2)}
+.src-btn:hover{filter:brightness(1.08)}
+.src-btn.ghost:hover{color:var(--text);border-color:var(--teal)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="topbar">
+    <div class="brand"><b>Career Intelligence Platform</b> · System Design</div>
+    <div class="navlinks"><a href="case-study.html">Case study</a><a href="demos.html">Demos</a><a href="architecture.html">Architecture</a><a href="https://github.com/ragkv/Career-Intelligence-Platform">Source code ↗</a></div>
+  </div>
+  <h1>How a request flows through <span>the system</span></h1>
+  <p class="sub">A live trace of <code style="font-family:var(--mono);font-size:12px;color:var(--teal)">POST /analyze</code> — résumé + job description in, evidence-based gap report out. Watch where each step's reasoning is routed: sensitive data stays local; only de-identified, public data is ever eligible for a cloud model.</p>
+  <div style="font-size:12.5px;color:var(--text2);margin:-2px 0 14px">Authored by <b style="color:var(--text);font-weight:700">Raghava Kundavajjala</b></div>
+
+  <div class="about">
+    <b>What it is —</b> a local-first engine that turns a résumé + a job description into an <b>evidence-grounded skill-gap report</b>: it scores every required skill against your real career history, <b>refuses to claim anything it can't cite</b> (no evidence → the skill is forced to 0), rewrites résumé bullets to surface transferable experience, and parses your résumé on-device so it <b>never leaves your machine</b>. A separate two-model pass independently re-checks the critical gaps. Below is a live trace of how one analysis request flows through all six layers.
+    <div class="about-links">
+      <a class="src-btn" href="https://github.com/ragkv/Career-Intelligence-Platform">💻 View the source code ↗</a>
+      <a class="src-btn ghost" href="case-study.html">📋 Case study</a>
+      <a class="src-btn ghost" href="demos.html">🧪 Demos</a>
+    </div>
+  </div>
+
+  <div class="board">
+    <div class="stage-wrap">
+      <div class="stage" id="stage">
+        <span class="lane-tag" style="left:10px;top:8px">app stack</span>
+        <span class="lane-tag" style="left:50%;top:30%;transform:translateX(-50%)">LangGraph gap pipeline · 6 nodes</span>
+        <span class="lane-tag" style="left:50%;bottom:6px;transform:translateX(-50%)">LLM router · providers</span>
+        <svg class="wires" id="wires" viewBox="0 0 100 100" preserveAspectRatio="none"></svg>
+        <div class="packet" id="packet"></div>
+      </div>
+    </div>
+
+    <aside class="narr">
+      <div class="step-no" id="stepNo">STEP 1 / 9</div>
+      <h2 id="stepTitle">—</h2>
+      <p id="stepDesc">—</p>
+      <div class="adr blue" id="adr"><span class="tag" id="adrTag">—</span><div id="adrText">—</div></div>
+    </aside>
+  </div>
+
+  <div class="controls">
+    <button class="btn primary" id="play">⏸ Pause</button>
+    <button class="btn" id="prev">◂ Prev</button>
+    <button class="btn" id="next">Next ▸</button>
+    <button class="btn" id="restart">↺ Restart</button>
+    <div class="dots" id="dots"></div>
+    <div class="speed">Speed
+      <select id="speed"><option value="4200">Slow</option><option value="3000" selected>Normal</option><option value="1800">Fast</option></select>
+    </div>
+  </div>
+
+  <div class="principles">
+    <div class="pr"><div class="h">🔒 Local-first (ADR-007)</div><div class="d">Résumé &amp; career data are routed to on-device Ollama only — never to any cloud API, in any mode.</div></div>
+    <div class="pr"><div class="h">🚫 No hallucinated skills</div><div class="d">Pydantic-validated output; a skill with no cited evidence is forced to score 0.</div></div>
+    <div class="pr"><div class="h">⚖️ Two-model consensus</div><div class="d">Critical gaps are re-checked by an independent verifier; final score = (scorer + verifier) ÷ 2.</div></div>
+    <div class="pr"><div class="h">💰 Budget hard-stop</div><div class="d">Spend is checked before every paid call; on the cap, calls fall back to local Ollama — analysis never fails.</div></div>
+    <div class="pr"><div class="h">💾 Crash-safe writes</div><div class="d">Every persist is write-temp → fsync → atomic rename; a crash never corrupts a file.</div></div>
+    <div class="pr"><div class="h">🧵 Thread-safe by request</div><div class="d">LLM mode is read from per-request state, never global config — concurrent calls don't interfere.</div></div>
+  </div>
+
+  <div class="foot">Strict one-way layering: <b>frontend → api → services → repositories / agents → domain</b> · LangGraph pipelines · sensitivity-aware LLM router (Ollama · Claude · OpenAI) · FastAPI · Python 3.14<br>Simulated walkthrough of the real architecture — full diagrams in <b>docs/ARCHITECTURE.md</b>.<br><span style="color:var(--text2)">Designed &amp; built by <b style="color:var(--text)">Raghava Kundavajjala</b></span></div>
+</div>
+
+<script>
+const NODES={
+  browser:{x:8,y:12,ic:'🖥',t:'Browser',s:'Vanilla JS',c:'fe'},
+  api:{x:8,y:30,ic:'⚡',t:'FastAPI',s:'routes · rate-limit',c:'api'},
+  service:{x:8,y:48,ic:'🧠',t:'AnalysisService',s:'orchestration',c:'svc'},
+  n1:{x:24,y:48,ic:'🔒',t:'parse_resume',s:'Ollama-only',c:'lock'},
+  n2:{x:37.6,y:48,ic:'📋',t:'parse_jd',s:'role · skills',c:'agt'},
+  n3:{x:51.2,y:48,ic:'🧮',t:'extract_skills',s:'normalise',c:'agt'},
+  n4:{x:64.8,y:48,ic:'🎯',t:'score_gaps',s:'evidence-locked',c:'ph3'},
+  n5:{x:78.4,y:48,ic:'⚖️',t:'verify_gaps',s:'two-model',c:'ph3'},
+  n6:{x:92,y:48,ic:'📊',t:'generate_report',s:'readiness %',c:'agt'},
+  router:{x:55,y:86,ic:'🔀',t:'LLM Router',s:'sensitivity-aware',c:'router'},
+  ollama:{x:20,y:86,ic:'🦙',t:'Ollama',s:'LOCAL · $0',c:'local'},
+  market:{x:35,y:86,ic:'🔍',t:'market_context',s:'skill names only',c:'tool'},
+  claude:{x:72,y:86,ic:'🧿',t:'Claude',s:'Haiku · Sonnet',c:'cloud'},
+  openai:{x:86,y:86,ic:'🟢',t:'OpenAI',s:'GPT-4o',c:'cloud'},
+};
+const FLOW=[['browser','api'],['api','service'],['service','n1'],['n1','n2'],['n2','n3'],['n3','n4'],['n4','n5'],['n5','n6'],['n6','browser','ret']];
+const BEAMS={ b_n1r:['n1','router','g'], b_rol:['router','ollama','g'], b_n4r:['n4','router','p'], b_rcl:['router','claude','p'], b_rop:['router','openai','t'], b_n4m:['n4','market','a'], b_n5r:['n5','router','p'] };
+
+const STEPS=[
+ {focus:'browser',on:['browser'],beams:[],lit:[],pkt:'',title:'Request begins',
+  desc:'You upload your résumé PDF, paste a job description, choose a mode, and hit Analyze. The browser sends one POST to /analyze.',
+  adr:['blue','FRONTEND','A vanilla ES-module UI — <b>no build step, no framework</b>. Theme persists with no flash on load.']},
+ {focus:'api',on:['api'],beams:[],lit:[],pkt:'',title:'API gateway',
+  desc:"FastAPI validates the résumé's PDF magic-bytes and the JD text, and enforces a 10-req/min per-IP rate limit before any work starts.",
+  adr:['amber','SECURITY','All user &amp; model input is treated as <b>untrusted</b> and validated up front.']},
+ {focus:'service',on:['service'],beams:[],lit:[],pkt:'',title:'Orchestration',
+  desc:'AnalysisService writes the résumé bytes to a secure temp file that is deleted in a finally block — even on error — then invokes the LangGraph GapAgent.',
+  adr:['teal','SAFE I/O','Résumé bytes are <b>never logged</b>; the temp file is always cleaned up.']},
+ {focus:'n1',on:['n1'],beams:['b_n1r','b_rol'],lit:['router','ollama'],pkt:'',title:'parse_resume → stays local',
+  desc:'The first node extracts and parses your résumé. The LLM Router sends this — and only this — to Ollama running on your own machine. The parsed profile is cached by SHA-256.',
+  adr:['green','ADR-007','Your résumé <b>never leaves the machine</b> — in any mode, even “sonnet”.']},
+ {focus:'n3',on:['n2','n3'],beams:[],lit:[],pkt:'cloud',title:'parse_jd · extract_skills',
+  desc:'The job description is public data, so it becomes cloud-eligible. Its required and preferred skills are extracted, normalised and categorised — capped at ~15 skills.',
+  adr:['green','ADR-007','Only <b>de-identified, public</b> data is ever eligible for a cloud model.']},
+ {focus:'n4',on:['n4'],beams:['b_n4r','b_rcl','b_rop','b_n4m'],lit:['router','claude','openai','market'],pkt:'cloud',title:'score_gaps — evidence-locked',
+  desc:'Each skill is scored against your real history. A market_context tool injects live salary &amp; demand using skill names only. Pydantic validates every field — and with no evidence, the score is forced to 0.',
+  adr:['red','NO HALLUCINATION','Evidence before score: the model <b>cannot claim a skill it can’t cite</b>.']},
+ {focus:'n5',on:['n5'],beams:['b_n5r','b_rcl'],lit:['router','claude'],pkt:'cloud',title:'verify_gaps — two-model consensus',
+  desc:'Critical, low-confidence skills are independently re-checked by a second model (Sonnet → Haiku → GPT-4o → Ollama). The final score = (scorer + verifier) ÷ 2, floored — slightly pessimistic on purpose.',
+  adr:['purple','CROSS-CHECK','A second model must agree — <b>catches confident-but-wrong scores</b>.']},
+ {focus:'n6',on:['n6'],beams:[],lit:[],pkt:'',title:'generate_report',
+  desc:'Readiness %, a prioritised week-by-week learning plan, and a confidence summary are assembled, then sanitised before anything leaves the system.',
+  adr:['amber','XSS-SAFE','All model output is <b>sanitised</b> before it reaches your browser.']},
+ {focus:'browser',on:['browser'],beams:[],lit:[],pkt:'',ret:true,title:'Response + Career DNA',
+  desc:'A 200 OK returns the gap report and the browser renders it. A non-blocking Career-DNA hook then updates your living profile in the background.',
+  adr:['teal','RESILIENT','The background DNA update can <b>never break your response</b> — fire-and-forget.']},
+];
+
+const stage=document.getElementById('stage'), wires=document.getElementById('wires'), packet=document.getElementById('packet');
+const SVGNS='http://www.w3.org/2000/svg';
+const nodeEls={};
+
+// build nodes
+for(const id in NODES){const n=NODES[id];const d=document.createElement('div');d.className='node '+n.c;d.style.left=n.x+'%';d.style.top=n.y+'%';
+  d.innerHTML=`<div class="ic">${n.ic}</div><div class="t">${n.t}</div><div class="s">${n.s}</div>`+(id==='ollama'?'<span class="badge-local">LOCAL</span>':'');
+  stage.appendChild(d);nodeEls[id]=d;}
+// build wires (flow)
+const flowEls={};
+FLOW.forEach((e,i)=>{const a=NODES[e[0]],b=NODES[e[1]];const p=document.createElementNS(SVGNS,'path');
+  p.setAttribute('d',`M ${a.x} ${a.y} L ${b.x} ${b.y}`);p.setAttribute('class','wire'+(e[2]==='ret'?' ret':''));wires.appendChild(p);flowEls[e[0]+'>'+e[1]]=p;});
+// build beams
+const beamEls={};
+for(const k in BEAMS){const [f,t,c]=BEAMS[k];const a=NODES[f],b=NODES[t];const p=document.createElementNS(SVGNS,'path');
+  p.setAttribute('d',`M ${a.x} ${a.y} L ${b.x} ${b.y}`);p.setAttribute('class','beam '+c);wires.appendChild(p);beamEls[k]=p;}
+// dots
+const dotsEl=document.getElementById('dots');
+STEPS.forEach((_,i)=>{const d=document.createElement('div');d.className='dot';d.onclick=()=>{goTo(i);pause();};dotsEl.appendChild(d);});
+
+let idx=0,timer=null,playing=true;
+function render(){
+  const st=STEPS[idx];
+  for(const id in nodeEls){nodeEls[id].classList.remove('on','lit','dim');}
+  st.on.forEach(id=>nodeEls[id].classList.add('on'));
+  st.lit.forEach(id=>nodeEls[id].classList.add('lit'));
+  // beams
+  for(const k in beamEls)beamEls[k].classList.toggle('on',st.beams.includes(k));
+  // return wire highlight
+  for(const k in flowEls)flowEls[k].classList.remove('flowon');
+  if(st.ret&&flowEls['n6>browser'])flowEls['n6>browser'].classList.add('flowon');
+  // packet
+  const f=NODES[st.focus];packet.style.left=f.x+'%';packet.style.top=f.y+'%';
+  packet.classList.toggle('cloud',st.pkt==='cloud');
+  // narration
+  document.getElementById('stepNo').textContent=`STEP ${idx+1} / ${STEPS.length}`;
+  document.getElementById('stepTitle').textContent=st.title;
+  document.getElementById('stepDesc').innerHTML=st.desc;
+  const adr=document.getElementById('adr');adr.className='adr '+st.adr[0];
+  document.getElementById('adrTag').textContent=st.adr[1];
+  document.getElementById('adrText').innerHTML=st.adr[2];
+  [...dotsEl.children].forEach((d,i)=>{d.classList.toggle('active',i===idx);d.classList.toggle('done',i<idx);});
+}
+function goTo(i){idx=(i+STEPS.length)%STEPS.length;render();}
+function nextStep(){goTo(idx+1);}
+function tick(){nextStep();}
+function play(){playing=true;document.getElementById('play').textContent='⏸ Pause';clearInterval(timer);timer=setInterval(tick,+document.getElementById('speed').value);}
+function pause(){playing=false;document.getElementById('play').textContent='▶ Play';clearInterval(timer);}
+document.getElementById('play').onclick=()=>playing?pause():play();
+document.getElementById('next').onclick=()=>{nextStep();pause();};
+document.getElementById('prev').onclick=()=>{goTo(idx-1);pause();};
+document.getElementById('restart').onclick=()=>{goTo(0);play();};
+document.getElementById('speed').onchange=()=>{if(playing)play();};
+document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){nextStep();pause();}if(e.key==='ArrowLeft'){goTo(idx-1);pause();}if(e.key===' '){e.preventDefault();playing?pause():play();}});
+
+render();play();
+</script>
+</body>
+</html>
