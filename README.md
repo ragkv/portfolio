@@ -5,8 +5,10 @@ A **local-first, evidence-grounded career-intelligence engine** — upload a ré
 | | |
 |---|---|
 | 🎬 **Live walkthrough** | https://ragkv.github.io/portfolio/ |
-| 💻 **Source code** | https://github.com/ragkv/Career-Intelligence-Platform |
+| 💻 **Source code** | https://github.com/ragkv/Career-Intelligence-Platform *(currently private — see below)* |
 | 👤 **Built by** | Raghava Kundavajjala |
+
+> 🔐 **Source access** — the code repository may be **private** while the project is being prepared for public release, so the link above can return a 404. If you'd like to review the source (e.g. for hiring or collaboration), I'm glad to grant read access on request — [open an issue](https://github.com/ragkv/portfolio/issues) and I'll add you as a collaborator.
 
 ---
 
