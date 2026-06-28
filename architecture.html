@@ -3,20 +3,21 @@
 <head>
 <meta charset="UTF-8">
 <title>CIP — Architecture Diagram v5.0</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Josefin+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
-body { background:#F1F5F9; font-family:'Segoe UI',system-ui,sans-serif; }
+body { background:#12161C; font-family:'Josefin Sans',system-ui,sans-serif; }
 .page { padding:24px 28px 32px; max-width:1400px; margin:0 auto; }
 .hdr { display:flex; align-items:flex-start; justify-content:space-between; margin-bottom:16px; gap:16px; }
-.hdr-left h1 { font-size:17px; font-weight:800; color:#0F172A; letter-spacing:-.3px; }
-.hdr-left h1 em { color:#0D9488; font-style:normal; }
-.hdr-left p  { font-size:10.5px; color:#64748B; margin-top:4px; }
+.hdr-left h1 { font-family:'Fraunces',Georgia,serif; font-size:17px; font-weight:700; color:#E5E9EF; letter-spacing:-.3px; }
+.hdr-left h1 em { color:#CFB573; font-style:normal; }
+.hdr-left p  { font-size:10.5px; color:#9AA5B5; margin-top:4px; }
 .legend { display:flex; gap:14px; align-items:center; flex-wrap:wrap; flex-shrink:0; margin-top:4px; }
-.leg { display:flex; align-items:center; gap:5px; font-size:10px; color:#374151; white-space:nowrap; }
+.leg { display:flex; align-items:center; gap:5px; font-size:10px; color:#9AA5B5; white-space:nowrap; }
 .ld { width:11px; height:11px; border-radius:3px; flex-shrink:0; }
-.card { background:white; border-radius:14px; padding:24px; box-shadow:0 2px 16px rgba(0,0,0,0.07); }
+.card { background:#181D25; border:1px solid #2C3542; border-radius:14px; padding:24px; box-shadow:0 2px 16px rgba(0,0,0,0.3); }
 svg { display:block; width:100%; height:auto; }
-.foot { display:flex; justify-content:space-between; margin-top:12px; font-size:9.5px; color:#94A3B8; padding:0 2px; }
+.foot { display:flex; justify-content:space-between; margin-top:12px; font-size:9.5px; color:#828D9E; padding:0 2px; }
 </style>
 </head>
 <body>
@@ -27,155 +28,155 @@ svg { display:block; width:100%; height:auto; }
       <p>Python · LangGraph · FastAPI · Vanilla JS (ES modules) · Ollama · Claude API · OpenAI API &nbsp;·&nbsp; 298 tests · ADR-007 local-first · Phase 3: Tool Calling ✅ · Agentic Debate Verify ✅</p>
     </div>
     <div class="legend">
-      <div class="leg"><div class="ld" style="background:#0D9488"></div>Active (live)</div>
-      <div class="leg"><div class="ld" style="background:#DC2626"></div>Local only (ADR-007)</div>
-      <div class="leg"><div class="ld" style="background:#F59E0B"></div>Budget-guarded cloud</div>
-      <div class="leg"><div class="ld" style="background:#8B5CF6"></div>Career DNA hooks</div>
-      <div class="leg"><div class="ld" style="background:#3B82F6"></div>External data feeds</div>
-      <div class="leg"><div class="ld" style="background:#6B7280"></div>Storage / files</div>
+      <div class="leg"><div class="ld" style="background:#7CB5AC"></div>Active (live)</div>
+      <div class="leg"><div class="ld" style="background:#CC8073"></div>Local only (ADR-007)</div>
+      <div class="leg"><div class="ld" style="background:#CFB573"></div>Budget-guarded cloud</div>
+      <div class="leg"><div class="ld" style="background:#A89BC0"></div>Career DNA hooks</div>
+      <div class="leg"><div class="ld" style="background:#7FA6CC"></div>External data feeds</div>
+      <div class="leg"><div class="ld" style="background:#828D9E"></div>Storage / files</div>
     </div>
   </div>
 
   <div class="card">
 <svg viewBox="0 0 1320 832" xmlns="http://www.w3.org/2000/svg">
 <defs>
-  <marker id="at" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#0D9488"/></marker>
-  <marker id="ar" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#DC2626"/></marker>
-  <marker id="ay" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#F59E0B"/></marker>
-  <marker id="ap" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#8B5CF6"/></marker>
-  <marker id="ab" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#3B82F6"/></marker>
-  <marker id="ag" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#6B7280"/></marker>
-  <filter id="sh"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#00000010"/></filter>
-  <filter id="shm"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000018"/></filter>
+  <marker id="at" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#7CB5AC"/></marker>
+  <marker id="ar" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#CC8073"/></marker>
+  <marker id="ay" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#CFB573"/></marker>
+  <marker id="ap" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#A89BC0"/></marker>
+  <marker id="ab" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#7FA6CC"/></marker>
+  <marker id="ag" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><polygon points="0 0,8 3,0 6" fill="#828D9E"/></marker>
+  <filter id="sh"><feDropShadow dx="0" dy="1" stdDeviation="2" flood-color="#00000040"/></filter>
+  <filter id="shm"><feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000055"/></filter>
 </defs>
 
-<rect width="1320" height="832" fill="white"/>
+<rect width="1320" height="832" fill="#12161C"/>
 
 <!-- ═══════════════════════════════════════════════
      COLUMN BACKGROUNDS
 ═══════════════════════════════════════════════ -->
-<rect x="10"  y="10" width="118" height="680" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
-<rect x="138" y="10" width="158" height="680" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
-<rect x="306" y="10" width="240" height="680" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
-<rect x="556" y="10" width="200" height="680" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
-<rect x="766" y="10" width="178" height="340" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
-<rect x="766" y="360" width="178" height="330" rx="8" fill="#FDF4FF" stroke="#E9D5FF" stroke-width="1"/>
-<rect x="954" y="10" width="180" height="340" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
-<rect x="954" y="360" width="180" height="330" rx="8" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
-<rect x="1144" y="10" width="166" height="680" rx="8" fill="#F8FAFC" stroke="#E2E8F0" stroke-width="1"/>
+<rect x="10"  y="10" width="118" height="680" rx="8" fill="#1F2630" stroke="#2C3542" stroke-width="1"/>
+<rect x="138" y="10" width="158" height="680" rx="8" fill="#1F2630" stroke="#2C3542" stroke-width="1"/>
+<rect x="306" y="10" width="240" height="680" rx="8" fill="#1F2630" stroke="#2C3542" stroke-width="1"/>
+<rect x="556" y="10" width="200" height="680" rx="8" fill="#1F2630" stroke="#2C3542" stroke-width="1"/>
+<rect x="766" y="10" width="178" height="340" rx="8" fill="#1F2630" stroke="#2C3542" stroke-width="1"/>
+<rect x="766" y="360" width="178" height="330" rx="8" fill="#1F2630" stroke="#3B3550" stroke-width="1"/>
+<rect x="954" y="10" width="180" height="340" rx="8" fill="#1F2630" stroke="#2C3542" stroke-width="1"/>
+<rect x="954" y="360" width="180" height="330" rx="8" fill="#1F2630" stroke="#2F3D52" stroke-width="1"/>
+<rect x="1144" y="10" width="166" height="680" rx="8" fill="#1F2630" stroke="#2C3542" stroke-width="1"/>
 
 <!-- ═══════════════════════════════════════════════
      COLUMN HEADERS
 ═══════════════════════════════════════════════ -->
-<text x="69"  y="32" font-family="Segoe UI,Arial" font-size="9" font-weight="700" fill="#94A3B8" text-anchor="middle" letter-spacing=".08em">BROWSER</text>
-<text x="217" y="32" font-family="Segoe UI,Arial" font-size="9" font-weight="700" fill="#94A3B8" text-anchor="middle" letter-spacing=".08em">API ROUTES</text>
-<text x="426" y="32" font-family="Segoe UI,Arial" font-size="9" font-weight="700" fill="#94A3B8" text-anchor="middle" letter-spacing=".08em">SERVICES + AGENTS</text>
-<text x="656" y="32" font-family="Segoe UI,Arial" font-size="9" font-weight="700" fill="#94A3B8" text-anchor="middle" letter-spacing=".08em">STORAGE</text>
-<text x="855" y="32" font-family="Segoe UI,Arial" font-size="9" font-weight="700" fill="#94A3B8" text-anchor="middle" letter-spacing=".08em">LLM ROUTER</text>
-<text x="855" y="378" font-family="Segoe UI,Arial" font-size="9" font-weight="700" fill="#7C3AED" text-anchor="middle" letter-spacing=".08em">CAREER DNA</text>
-<text x="1044" y="32" font-family="Segoe UI,Arial" font-size="9" font-weight="700" fill="#94A3B8" text-anchor="middle" letter-spacing=".08em">LLM PROVIDERS</text>
-<text x="1044" y="378" font-family="Segoe UI,Arial" font-size="9" font-weight="700" fill="#1D4ED8" text-anchor="middle" letter-spacing=".08em">EXTERNAL DATA</text>
-<text x="1227" y="32" font-family="Segoe UI,Arial" font-size="9" font-weight="700" fill="#94A3B8" text-anchor="middle" letter-spacing=".08em">DATA FILES</text>
+<text x="69"  y="32" font-family="Segoe UI,Arial" font-size="9" font-weight="700" fill="#828D9E" text-anchor="middle" letter-spacing=".08em">BROWSER</text>
+<text x="217" y="32" font-family="Segoe UI,Arial" font-size="9" font-weight="700" fill="#828D9E" text-anchor="middle" letter-spacing=".08em">API ROUTES</text>
+<text x="426" y="32" font-family="Segoe UI,Arial" font-size="9" font-weight="700" fill="#828D9E" text-anchor="middle" letter-spacing=".08em">SERVICES + AGENTS</text>
+<text x="656" y="32" font-family="Segoe UI,Arial" font-size="9" font-weight="700" fill="#828D9E" text-anchor="middle" letter-spacing=".08em">STORAGE</text>
+<text x="855" y="32" font-family="Segoe UI,Arial" font-size="9" font-weight="700" fill="#828D9E" text-anchor="middle" letter-spacing=".08em">LLM ROUTER</text>
+<text x="855" y="378" font-family="Segoe UI,Arial" font-size="9" font-weight="700" fill="#A89BC0" text-anchor="middle" letter-spacing=".08em">CAREER DNA</text>
+<text x="1044" y="32" font-family="Segoe UI,Arial" font-size="9" font-weight="700" fill="#828D9E" text-anchor="middle" letter-spacing=".08em">LLM PROVIDERS</text>
+<text x="1044" y="378" font-family="Segoe UI,Arial" font-size="9" font-weight="700" fill="#7FA6CC" text-anchor="middle" letter-spacing=".08em">EXTERNAL DATA</text>
+<text x="1227" y="32" font-family="Segoe UI,Arial" font-size="9" font-weight="700" fill="#828D9E" text-anchor="middle" letter-spacing=".08em">DATA FILES</text>
 
 <!-- ═══════════════════════════════════════════════
      BROWSER — Frontend tabs
 ═══════════════════════════════════════════════ -->
 <g filter="url(#sh)">
-  <rect x="20" y="44" width="98" height="26" rx="5" fill="#0D9488"/>
-  <text x="69" y="61" font-family="Segoe UI,Arial" font-size="9.5" font-weight="700" fill="white" text-anchor="middle">Gap Analysis</text>
+  <rect x="20" y="44" width="98" height="26" rx="5" fill="#232C38" stroke="#7CB5AC" stroke-width="1"/>
+  <text x="69" y="61" font-family="Segoe UI,Arial" font-size="9.5" font-weight="700" fill="#9FD6CB" text-anchor="middle">Gap Analysis</text>
 </g>
 <g filter="url(#sh)">
-  <rect x="20" y="76" width="98" height="26" rx="5" fill="#0D9488"/>
-  <text x="69" y="93" font-family="Segoe UI,Arial" font-size="9.5" font-weight="700" fill="white" text-anchor="middle">STAR Stories</text>
+  <rect x="20" y="76" width="98" height="26" rx="5" fill="#232C38" stroke="#7CB5AC" stroke-width="1"/>
+  <text x="69" y="93" font-family="Segoe UI,Arial" font-size="9.5" font-weight="700" fill="#9FD6CB" text-anchor="middle">STAR Stories</text>
 </g>
 <g filter="url(#sh)">
-  <rect x="20" y="108" width="98" height="26" rx="5" fill="#0D9488"/>
-  <text x="69" y="125" font-family="Segoe UI,Arial" font-size="9.5" font-weight="700" fill="white" text-anchor="middle">Self-Assess</text>
+  <rect x="20" y="108" width="98" height="26" rx="5" fill="#232C38" stroke="#7CB5AC" stroke-width="1"/>
+  <text x="69" y="125" font-family="Segoe UI,Arial" font-size="9.5" font-weight="700" fill="#9FD6CB" text-anchor="middle">Self-Assess</text>
 </g>
 <g filter="url(#sh)">
-  <rect x="20" y="140" width="98" height="26" rx="5" fill="#0D9488"/>
-  <text x="69" y="157" font-family="Segoe UI,Arial" font-size="9.5" font-weight="700" fill="white" text-anchor="middle">Learning Path</text>
+  <rect x="20" y="140" width="98" height="26" rx="5" fill="#232C38" stroke="#7CB5AC" stroke-width="1"/>
+  <text x="69" y="157" font-family="Segoe UI,Arial" font-size="9.5" font-weight="700" fill="#9FD6CB" text-anchor="middle">Learning Path</text>
 </g>
 <g filter="url(#sh)">
-  <rect x="20" y="172" width="98" height="26" rx="5" fill="#7C3AED"/>
-  <text x="69" y="189" font-family="Segoe UI,Arial" font-size="9.5" font-weight="700" fill="white" text-anchor="middle">🧬 Career DNA</text>
+  <rect x="20" y="172" width="98" height="26" rx="5" fill="#232C38" stroke="#A89BC0" stroke-width="1"/>
+  <text x="69" y="189" font-family="Segoe UI,Arial" font-size="9.5" font-weight="700" fill="#C3B8D6" text-anchor="middle">🧬 Career DNA</text>
 </g>
 <g filter="url(#sh)">
-  <rect x="20" y="204" width="98" height="26" rx="5" fill="#0D9488"/>
-  <text x="69" y="221" font-family="Segoe UI,Arial" font-size="9.5" font-weight="700" fill="white" text-anchor="middle">Jobs Hub</text>
+  <rect x="20" y="204" width="98" height="26" rx="5" fill="#232C38" stroke="#7CB5AC" stroke-width="1"/>
+  <text x="69" y="221" font-family="Segoe UI,Arial" font-size="9.5" font-weight="700" fill="#9FD6CB" text-anchor="middle">Jobs Hub</text>
 </g>
 <g filter="url(#sh)">
-  <rect x="20" y="236" width="98" height="26" rx="5" fill="#0D9488"/>
-  <text x="69" y="253" font-family="Segoe UI,Arial" font-size="9.5" font-weight="700" fill="white" text-anchor="middle">Job Pipeline</text>
+  <rect x="20" y="236" width="98" height="26" rx="5" fill="#232C38" stroke="#7CB5AC" stroke-width="1"/>
+  <text x="69" y="253" font-family="Segoe UI,Arial" font-size="9.5" font-weight="700" fill="#9FD6CB" text-anchor="middle">Job Pipeline</text>
 </g>
 <g filter="url(#sh)">
-  <rect x="20" y="268" width="98" height="26" rx="5" fill="#0D9488"/>
-  <text x="69" y="285" font-family="Segoe UI,Arial" font-size="9.5" font-weight="700" fill="white" text-anchor="middle">Market Intel</text>
+  <rect x="20" y="268" width="98" height="26" rx="5" fill="#232C38" stroke="#7CB5AC" stroke-width="1"/>
+  <text x="69" y="285" font-family="Segoe UI,Arial" font-size="9.5" font-weight="700" fill="#9FD6CB" text-anchor="middle">Market Intel</text>
 </g>
 <g filter="url(#sh)">
-  <rect x="20" y="300" width="98" height="26" rx="5" fill="#0D9488"/>
-  <text x="69" y="317" font-family="Segoe UI,Arial" font-size="9.5" font-weight="700" fill="white" text-anchor="middle">Budget / Health</text>
+  <rect x="20" y="300" width="98" height="26" rx="5" fill="#232C38" stroke="#7CB5AC" stroke-width="1"/>
+  <text x="69" y="317" font-family="Segoe UI,Arial" font-size="9.5" font-weight="700" fill="#9FD6CB" text-anchor="middle">Budget / Health</text>
 </g>
 
 <!-- ES modules note -->
-<rect x="20" y="336" width="98" height="36" rx="5" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1"/>
-<text x="69" y="350" font-family="Segoe UI,Arial" font-size="8.5" font-weight="600" fill="#15803D" text-anchor="middle">15 ES modules</text>
-<text x="69" y="362" font-family="Segoe UI,Arial" font-size="8" fill="#4ADE80" text-anchor="middle">no build step</text>
+<rect x="20" y="336" width="98" height="36" rx="5" fill="#1B2A22" stroke="#8FB89E" stroke-width="1"/>
+<text x="69" y="350" font-family="Segoe UI,Arial" font-size="8.5" font-weight="600" fill="#8FB89E" text-anchor="middle">15 ES modules</text>
+<text x="69" y="362" font-family="Segoe UI,Arial" font-size="8" fill="#9AA5B5" text-anchor="middle">no build step</text>
 
 <!-- ═══════════════════════════════════════════════
      API ROUTES
 ═══════════════════════════════════════════════ -->
 <g filter="url(#sh)">
-  <rect x="148" y="44"  width="138" height="22" rx="4" fill="#0F766E"/>
-  <text x="217" y="59" font-family="Segoe UI,Arial" font-size="9" font-weight="600" fill="white" text-anchor="middle">POST /analyze · /jobs/{id}/analyze</text>
+  <rect x="148" y="44"  width="138" height="22" rx="4" fill="#232C38" stroke="#7CB5AC" stroke-width="1"/>
+  <text x="217" y="59" font-family="Segoe UI,Arial" font-size="9" font-weight="600" fill="#9FD6CB" text-anchor="middle">POST /analyze · /jobs/{id}/analyze</text>
 </g>
 <g filter="url(#sh)">
-  <rect x="148" y="72"  width="138" height="22" rx="4" fill="#0F766E"/>
-  <text x="217" y="87" font-family="Segoe UI,Arial" font-size="9" font-weight="600" fill="white" text-anchor="middle">POST /mutate · /jobs/{id}/mutate</text>
+  <rect x="148" y="72"  width="138" height="22" rx="4" fill="#232C38" stroke="#7CB5AC" stroke-width="1"/>
+  <text x="217" y="87" font-family="Segoe UI,Arial" font-size="9" font-weight="600" fill="#9FD6CB" text-anchor="middle">POST /mutate · /jobs/{id}/mutate</text>
 </g>
 <g filter="url(#sh)">
-  <rect x="148" y="100" width="138" height="22" rx="4" fill="#0F766E"/>
-  <text x="217" y="115" font-family="Segoe UI,Arial" font-size="9" font-weight="600" fill="white" text-anchor="middle">POST /jobs/{id}/stars/*</text>
+  <rect x="148" y="100" width="138" height="22" rx="4" fill="#232C38" stroke="#7CB5AC" stroke-width="1"/>
+  <text x="217" y="115" font-family="Segoe UI,Arial" font-size="9" font-weight="600" fill="#9FD6CB" text-anchor="middle">POST /jobs/{id}/stars/*</text>
 </g>
 <g filter="url(#sh)">
-  <rect x="148" y="128" width="138" height="22" rx="4" fill="#0F766E"/>
-  <text x="217" y="143" font-family="Segoe UI,Arial" font-size="9" font-weight="600" fill="white" text-anchor="middle">POST /jobs/{id}/assess/*</text>
+  <rect x="148" y="128" width="138" height="22" rx="4" fill="#232C38" stroke="#7CB5AC" stroke-width="1"/>
+  <text x="217" y="143" font-family="Segoe UI,Arial" font-size="9" font-weight="600" fill="#9FD6CB" text-anchor="middle">POST /jobs/{id}/assess/*</text>
 </g>
 <g filter="url(#sh)">
-  <rect x="148" y="156" width="138" height="22" rx="4" fill="#6D28D9"/>
-  <text x="217" y="171" font-family="Segoe UI,Arial" font-size="9" font-weight="600" fill="white" text-anchor="middle">GET /career-dna · /skills · /goal</text>
+  <rect x="148" y="156" width="138" height="22" rx="4" fill="#232C38" stroke="#A89BC0" stroke-width="1"/>
+  <text x="217" y="171" font-family="Segoe UI,Arial" font-size="9" font-weight="600" fill="#C3B8D6" text-anchor="middle">GET /career-dna · /skills · /goal</text>
 </g>
 <g filter="url(#sh)">
-  <rect x="148" y="184" width="138" height="22" rx="4" fill="#6D28D9"/>
-  <text x="217" y="199" font-family="Segoe UI,Arial" font-size="9" font-weight="600" fill="white" text-anchor="middle">POST /career-dna/goal · /skills</text>
+  <rect x="148" y="184" width="138" height="22" rx="4" fill="#232C38" stroke="#A89BC0" stroke-width="1"/>
+  <text x="217" y="199" font-family="Segoe UI,Arial" font-size="9" font-weight="600" fill="#C3B8D6" text-anchor="middle">POST /career-dna/goal · /skills</text>
 </g>
 <g filter="url(#sh)">
-  <rect x="148" y="212" width="138" height="22" rx="4" fill="#0F766E"/>
-  <text x="217" y="227" font-family="Segoe UI,Arial" font-size="9" font-weight="600" fill="white" text-anchor="middle">GET /hub/jobs · POST /hub/refresh</text>
+  <rect x="148" y="212" width="138" height="22" rx="4" fill="#232C38" stroke="#7CB5AC" stroke-width="1"/>
+  <text x="217" y="227" font-family="Segoe UI,Arial" font-size="9" font-weight="600" fill="#9FD6CB" text-anchor="middle">GET /hub/jobs · POST /hub/refresh</text>
 </g>
 <g filter="url(#sh)">
-  <rect x="148" y="240" width="138" height="22" rx="4" fill="#0F766E"/>
-  <text x="217" y="255" font-family="Segoe UI,Arial" font-size="9" font-weight="600" fill="white" text-anchor="middle">GET/POST /jobs · /pipeline</text>
+  <rect x="148" y="240" width="138" height="22" rx="4" fill="#232C38" stroke="#7CB5AC" stroke-width="1"/>
+  <text x="217" y="255" font-family="Segoe UI,Arial" font-size="9" font-weight="600" fill="#9FD6CB" text-anchor="middle">GET/POST /jobs · /pipeline</text>
 </g>
 <g filter="url(#sh)">
-  <rect x="148" y="268" width="138" height="22" rx="4" fill="#0F766E"/>
-  <text x="217" y="283" font-family="Segoe UI,Arial" font-size="9" font-weight="600" fill="white" text-anchor="middle">GET /learning/plan · PATCH /tasks</text>
+  <rect x="148" y="268" width="138" height="22" rx="4" fill="#232C38" stroke="#7CB5AC" stroke-width="1"/>
+  <text x="217" y="283" font-family="Segoe UI,Arial" font-size="9" font-weight="600" fill="#9FD6CB" text-anchor="middle">GET /learning/plan · PATCH /tasks</text>
 </g>
 <g filter="url(#sh)">
-  <rect x="148" y="296" width="138" height="22" rx="4" fill="#0F766E"/>
-  <text x="217" y="311" font-family="Segoe UI,Arial" font-size="9" font-weight="600" fill="white" text-anchor="middle">GET /health · /budget · /security</text>
+  <rect x="148" y="296" width="138" height="22" rx="4" fill="#232C38" stroke="#7CB5AC" stroke-width="1"/>
+  <text x="217" y="311" font-family="Segoe UI,Arial" font-size="9" font-weight="600" fill="#9FD6CB" text-anchor="middle">GET /health · /budget · /security</text>
 </g>
 
 <!-- Middleware box -->
-<rect x="148" y="330" width="138" height="44" rx="5" fill="#FFF7ED" stroke="#FED7AA" stroke-width="1"/>
-<text x="217" y="346" font-family="Segoe UI,Arial" font-size="8.5" font-weight="700" fill="#92400E" text-anchor="middle">RateLimitMiddleware</text>
-<text x="217" y="358" font-family="Segoe UI,Arial" font-size="7.5" fill="#B45309" text-anchor="middle">10 rpm /analyze /mutate</text>
-<text x="217" y="368" font-family="Segoe UI,Arial" font-size="7.5" fill="#B45309" text-anchor="middle">1/hour /hub/refresh (Depends)</text>
+<rect x="148" y="330" width="138" height="44" rx="5" fill="#2A2417" stroke="#CFB573" stroke-width="1"/>
+<text x="217" y="346" font-family="Segoe UI,Arial" font-size="8.5" font-weight="700" fill="#CFB573" text-anchor="middle">RateLimitMiddleware</text>
+<text x="217" y="358" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">10 rpm /analyze /mutate</text>
+<text x="217" y="368" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">1/hour /hub/refresh (Depends)</text>
 
 <!-- DI box -->
-<rect x="148" y="382" width="138" height="32" rx="5" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1"/>
-<text x="217" y="396" font-family="Segoe UI,Arial" font-size="8.5" font-weight="700" fill="#15803D" text-anchor="middle">api/dependencies.py</text>
-<text x="217" y="408" font-family="Segoe UI,Arial" font-size="7.5" fill="#4ADE80" text-anchor="middle">Dependency injection singletons</text>
+<rect x="148" y="382" width="138" height="32" rx="5" fill="#1B2A22" stroke="#8FB89E" stroke-width="1"/>
+<text x="217" y="396" font-family="Segoe UI,Arial" font-size="8.5" font-weight="700" fill="#8FB89E" text-anchor="middle">api/dependencies.py</text>
+<text x="217" y="408" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">Dependency injection singletons</text>
 
 <!-- ═══════════════════════════════════════════════
      SERVICES + AGENTS
@@ -183,263 +184,263 @@ svg { display:block; width:100%; height:auto; }
 
 <!-- Analysis Service -->
 <g filter="url(#sh)">
-  <rect x="316" y="44" width="220" height="56" rx="6" fill="#134E4A"/>
-  <text x="426" y="61" font-family="Segoe UI,Arial" font-size="10" font-weight="700" fill="white" text-anchor="middle">AnalysisService → GapAgent (6-node)</text>
-  <text x="426" y="74" font-family="Segoe UI,Arial" font-size="8" fill="#5EEAD4" text-anchor="middle">parse_resume → parse_jd → extract_skills</text>
-  <text x="426" y="86" font-family="Segoe UI,Arial" font-size="8" fill="#F6AD55" text-anchor="middle">→ score_gaps ✦ → verify_gaps ✦ → generate_report</text>
-  <text x="426" y="96" font-family="Segoe UI,Arial" font-size="7.5" fill="#68D391" text-anchor="middle">✦ Phase 3: market-context tool · agentic debate verify</text>
+  <rect x="316" y="44" width="220" height="56" rx="6" fill="#232C38" stroke="#7CB5AC" stroke-width="1"/>
+  <text x="426" y="61" font-family="Segoe UI,Arial" font-size="10" font-weight="700" fill="#E5E9EF" text-anchor="middle">AnalysisService → GapAgent (6-node)</text>
+  <text x="426" y="74" font-family="Segoe UI,Arial" font-size="8" fill="#7CB5AC" text-anchor="middle">parse_resume → parse_jd → extract_skills</text>
+  <text x="426" y="86" font-family="Segoe UI,Arial" font-size="8" fill="#CFB573" text-anchor="middle">→ score_gaps ✦ → verify_gaps ✦ → generate_report</text>
+  <text x="426" y="96" font-family="Segoe UI,Arial" font-size="7.5" fill="#8FB89E" text-anchor="middle">✦ Phase 3: market-context tool · agentic debate verify</text>
 </g>
 
 <!-- Mutation Service -->
 <g filter="url(#sh)">
-  <rect x="316" y="108" width="220" height="40" rx="6" fill="#134E4A"/>
-  <text x="426" y="126" font-family="Segoe UI,Arial" font-size="10" font-weight="700" fill="white" text-anchor="middle">MutationService → MutationAgent</text>
-  <text x="426" y="140" font-family="Segoe UI,Arial" font-size="8.5" fill="#5EEAD4" text-anchor="middle">load_profile → mutate_bullets</text>
+  <rect x="316" y="108" width="220" height="40" rx="6" fill="#232C38" stroke="#7CB5AC" stroke-width="1"/>
+  <text x="426" y="126" font-family="Segoe UI,Arial" font-size="10" font-weight="700" fill="#E5E9EF" text-anchor="middle">MutationService → MutationAgent</text>
+  <text x="426" y="140" font-family="Segoe UI,Arial" font-size="8.5" fill="#7CB5AC" text-anchor="middle">load_profile → mutate_bullets</text>
 </g>
 
 <!-- STAR Service -->
 <g filter="url(#sh)">
-  <rect x="316" y="156" width="220" height="40" rx="6" fill="#134E4A"/>
-  <text x="426" y="174" font-family="Segoe UI,Arial" font-size="10" font-weight="700" fill="white" text-anchor="middle">StarService → StarAgent</text>
-  <text x="426" y="188" font-family="Segoe UI,Arial" font-size="8.5" fill="#5EEAD4" text-anchor="middle">generate · enrich · practice · quality score</text>
+  <rect x="316" y="156" width="220" height="40" rx="6" fill="#232C38" stroke="#7CB5AC" stroke-width="1"/>
+  <text x="426" y="174" font-family="Segoe UI,Arial" font-size="10" font-weight="700" fill="#E5E9EF" text-anchor="middle">StarService → StarAgent</text>
+  <text x="426" y="188" font-family="Segoe UI,Arial" font-size="8.5" fill="#7CB5AC" text-anchor="middle">generate · enrich · practice · quality score</text>
 </g>
 
 <!-- Assess Service -->
 <g filter="url(#sh)">
-  <rect x="316" y="204" width="220" height="40" rx="6" fill="#134E4A"/>
-  <text x="426" y="222" font-family="Segoe UI,Arial" font-size="10" font-weight="700" fill="white" text-anchor="middle">AssessService → SelfAssessmentAgent</text>
-  <text x="426" y="236" font-family="Segoe UI,Arial" font-size="8.5" fill="#5EEAD4" text-anchor="middle">questions · calibrate (pure Python, $0)</text>
+  <rect x="316" y="204" width="220" height="40" rx="6" fill="#232C38" stroke="#7CB5AC" stroke-width="1"/>
+  <text x="426" y="222" font-family="Segoe UI,Arial" font-size="10" font-weight="700" fill="#E5E9EF" text-anchor="middle">AssessService → SelfAssessmentAgent</text>
+  <text x="426" y="236" font-family="Segoe UI,Arial" font-size="8.5" fill="#7CB5AC" text-anchor="middle">questions · calibrate (pure Python, $0)</text>
 </g>
 
 <!-- Learning Service -->
 <g filter="url(#sh)">
-  <rect x="316" y="252" width="220" height="40" rx="6" fill="#134E4A"/>
-  <text x="426" y="270" font-family="Segoe UI,Arial" font-size="10" font-weight="700" fill="white" text-anchor="middle">LearningPathAgent</text>
-  <text x="426" y="284" font-family="Segoe UI,Arial" font-size="8.5" fill="#5EEAD4" text-anchor="middle">collect_gaps → dedup → generate tasks</text>
+  <rect x="316" y="252" width="220" height="40" rx="6" fill="#232C38" stroke="#7CB5AC" stroke-width="1"/>
+  <text x="426" y="270" font-family="Segoe UI,Arial" font-size="10" font-weight="700" fill="#E5E9EF" text-anchor="middle">LearningPathAgent</text>
+  <text x="426" y="284" font-family="Segoe UI,Arial" font-size="8.5" fill="#7CB5AC" text-anchor="middle">collect_gaps → dedup → generate tasks</text>
 </g>
 
 <!-- Hub Fetch Service -->
 <g filter="url(#sh)">
-  <rect x="316" y="300" width="220" height="54" rx="6" fill="#1E3A5F"/>
-  <text x="426" y="320" font-family="Segoe UI,Arial" font-size="10" font-weight="700" fill="white" text-anchor="middle">HubFetchService</text>
-  <text x="426" y="334" font-family="Segoe UI,Arial" font-size="8.5" fill="#93C5FD" text-anchor="middle">JSearch + Remotive + Apify (levels.fyi)</text>
-  <text x="426" y="346" font-family="Segoe UI,Arial" font-size="8.5" fill="#93C5FD" text-anchor="middle">PII strip · URL validate · 23h cooldown</text>
+  <rect x="316" y="300" width="220" height="54" rx="6" fill="#232C38" stroke="#7FA6CC" stroke-width="1"/>
+  <text x="426" y="320" font-family="Segoe UI,Arial" font-size="10" font-weight="700" fill="#E5E9EF" text-anchor="middle">HubFetchService</text>
+  <text x="426" y="334" font-family="Segoe UI,Arial" font-size="8.5" fill="#7FA6CC" text-anchor="middle">JSearch + Remotive + Apify (levels.fyi)</text>
+  <text x="426" y="346" font-family="Segoe UI,Arial" font-size="8.5" fill="#7FA6CC" text-anchor="middle">PII strip · URL validate · 23h cooldown</text>
 </g>
 
 <!-- Career DNA Service -->
 <g filter="url(#sh)">
-  <rect x="316" y="362" width="220" height="76" rx="6" fill="#3B0764"/>
-  <text x="426" y="381" font-family="Segoe UI,Arial" font-size="10" font-weight="700" fill="white" text-anchor="middle">CareerDNAService</text>
-  <text x="426" y="396" font-family="Segoe UI,Arial" font-size="8" fill="#C4B5FD" text-anchor="middle">initialize_from_resume</text>
-  <text x="426" y="409" font-family="Segoe UI,Arial" font-size="8" fill="#C4B5FD" text-anchor="middle">update_from_gap · assess · star · learning</text>
-  <text x="426" y="422" font-family="Segoe UI,Arial" font-size="8" fill="#C4B5FD" text-anchor="middle">add_skill_manual · set_goal · market_signals</text>
-  <text x="426" y="430" font-family="Segoe UI,Arial" font-size="8" fill="#C4B5FD" text-anchor="middle">Score rules: gap↑only · assess=auth · +0.5 learn</text>
+  <rect x="316" y="362" width="220" height="76" rx="6" fill="#232C38" stroke="#A89BC0" stroke-width="1"/>
+  <text x="426" y="381" font-family="Segoe UI,Arial" font-size="10" font-weight="700" fill="#E5E9EF" text-anchor="middle">CareerDNAService</text>
+  <text x="426" y="396" font-family="Segoe UI,Arial" font-size="8" fill="#A89BC0" text-anchor="middle">initialize_from_resume</text>
+  <text x="426" y="409" font-family="Segoe UI,Arial" font-size="8" fill="#A89BC0" text-anchor="middle">update_from_gap · assess · star · learning</text>
+  <text x="426" y="422" font-family="Segoe UI,Arial" font-size="8" fill="#A89BC0" text-anchor="middle">add_skill_manual · set_goal · market_signals</text>
+  <text x="426" y="430" font-family="Segoe UI,Arial" font-size="8" fill="#A89BC0" text-anchor="middle">Score rules: gap↑only · assess=auth · +0.5 learn</text>
 </g>
 
 <!-- Score rules key -->
-<rect x="316" y="446" width="220" height="36" rx="5" fill="#FAF5FF" stroke="#DDD6FE" stroke-width="1"/>
-<text x="426" y="460" font-family="Segoe UI,Arial" font-size="8" font-weight="700" fill="#6D28D9" text-anchor="middle">Score authority: manual &gt; assess ≥ gap ≥ resume</text>
-<text x="426" y="474" font-family="Segoe UI,Arial" font-size="7.5" fill="#7C3AED" text-anchor="middle">Timeline append-only · Roadmap on goal change only</text>
+<rect x="316" y="446" width="220" height="36" rx="5" fill="#26223040" stroke="#3B3550" stroke-width="1"/>
+<text x="426" y="460" font-family="Segoe UI,Arial" font-size="8" font-weight="700" fill="#A89BC0" text-anchor="middle">Score authority: manual &gt; assess ≥ gap ≥ resume</text>
+<text x="426" y="474" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">Timeline append-only · Roadmap on goal change only</text>
 
 <!-- Budget Service -->
 <g filter="url(#sh)">
-  <rect x="316" y="490" width="220" height="36" rx="6" fill="#134E4A"/>
-  <text x="426" y="509" font-family="Segoe UI,Arial" font-size="10" font-weight="700" fill="white" text-anchor="middle">BudgetService</text>
-  <text x="426" y="522" font-family="Segoe UI,Arial" font-size="8.5" fill="#5EEAD4" text-anchor="middle">check_limit · record_call · Claude+OpenAI pricing</text>
+  <rect x="316" y="490" width="220" height="36" rx="6" fill="#232C38" stroke="#7CB5AC" stroke-width="1"/>
+  <text x="426" y="509" font-family="Segoe UI,Arial" font-size="10" font-weight="700" fill="#E5E9EF" text-anchor="middle">BudgetService</text>
+  <text x="426" y="522" font-family="Segoe UI,Arial" font-size="8.5" fill="#7CB5AC" text-anchor="middle">check_limit · record_call · Claude+OpenAI pricing</text>
 </g>
 
 <!-- ═══════════════════════════════════════════════
      STORAGE
 ═══════════════════════════════════════════════ -->
 
-<rect x="566" y="44" width="180" height="26" rx="5" fill="#DC2626"/>
-<text x="656" y="61" font-family="Segoe UI,Arial" font-size="9.5" font-weight="700" fill="white" text-anchor="middle">🔒 career_profile.json</text>
+<rect x="566" y="44" width="180" height="26" rx="5" fill="#2E1C19" stroke="#CC8073" stroke-width="1"/>
+<text x="656" y="61" font-family="Segoe UI,Arial" font-size="9.5" font-weight="700" fill="#CC8073" text-anchor="middle">🔒 career_profile.json</text>
 
-<rect x="566" y="76" width="180" height="20" rx="4" fill="#374151"/>
-<text x="656" y="90" font-family="Segoe UI,Arial" font-size="8.5" font-weight="600" fill="#D1FAE5" text-anchor="middle">gap_report.json · mutations.json</text>
+<rect x="566" y="76" width="180" height="20" rx="4" fill="#1F2630" stroke="#3B4554" stroke-width="1"/>
+<text x="656" y="90" font-family="Segoe UI,Arial" font-size="8.5" font-weight="600" fill="#C8D0DC" text-anchor="middle">gap_report.json · mutations.json</text>
 
-<rect x="566" y="102" width="180" height="20" rx="4" fill="#374151"/>
-<text x="656" y="116" font-family="Segoe UI,Arial" font-size="8.5" font-weight="600" fill="#D1FAE5" text-anchor="middle">stars.json · assessment.json</text>
+<rect x="566" y="102" width="180" height="20" rx="4" fill="#1F2630" stroke="#3B4554" stroke-width="1"/>
+<text x="656" y="116" font-family="Segoe UI,Arial" font-size="8.5" font-weight="600" fill="#C8D0DC" text-anchor="middle">stars.json · assessment.json</text>
 
-<rect x="566" y="128" width="180" height="20" rx="4" fill="#374151"/>
-<text x="656" y="142" font-family="Segoe UI,Arial" font-size="8.5" font-weight="600" fill="#D1FAE5" text-anchor="middle">learning_plan.json · skill_journal.json</text>
+<rect x="566" y="128" width="180" height="20" rx="4" fill="#1F2630" stroke="#3B4554" stroke-width="1"/>
+<text x="656" y="142" font-family="Segoe UI,Arial" font-size="8.5" font-weight="600" fill="#C8D0DC" text-anchor="middle">learning_plan.json · skill_journal.json</text>
 
-<rect x="566" y="154" width="180" height="20" rx="4" fill="#374151"/>
-<text x="656" y="168" font-family="Segoe UI,Arial" font-size="8.5" font-weight="600" fill="#D1FAE5" text-anchor="middle">jobs/{id}/meta.json</text>
+<rect x="566" y="154" width="180" height="20" rx="4" fill="#1F2630" stroke="#3B4554" stroke-width="1"/>
+<text x="656" y="168" font-family="Segoe UI,Arial" font-size="8.5" font-weight="600" fill="#C8D0DC" text-anchor="middle">jobs/{id}/meta.json</text>
 
-<rect x="566" y="180" width="180" height="20" rx="4" fill="#7C3AED"/>
-<text x="656" y="194" font-family="Segoe UI,Arial" font-size="8.5" font-weight="700" fill="white" text-anchor="middle">🧬 career_dna.json</text>
+<rect x="566" y="180" width="180" height="20" rx="4" fill="#26203040" stroke="#A89BC0" stroke-width="1"/>
+<text x="656" y="194" font-family="Segoe UI,Arial" font-size="8.5" font-weight="700" fill="#C3B8D6" text-anchor="middle">🧬 career_dna.json</text>
 
-<rect x="566" y="206" width="180" height="20" rx="4" fill="#374151"/>
-<text x="656" y="220" font-family="Segoe UI,Arial" font-size="8.5" font-weight="600" fill="#D1FAE5" text-anchor="middle">jobs_hub/cache/jobs_cache.json</text>
+<rect x="566" y="206" width="180" height="20" rx="4" fill="#1F2630" stroke="#3B4554" stroke-width="1"/>
+<text x="656" y="220" font-family="Segoe UI,Arial" font-size="8.5" font-weight="600" fill="#C8D0DC" text-anchor="middle">jobs_hub/cache/jobs_cache.json</text>
 
-<rect x="566" y="232" width="180" height="20" rx="4" fill="#374151"/>
-<text x="656" y="246" font-family="Segoe UI,Arial" font-size="8.5" font-weight="600" fill="#D1FAE5" text-anchor="middle">budget.json · saved_searches.json</text>
+<rect x="566" y="232" width="180" height="20" rx="4" fill="#1F2630" stroke="#3B4554" stroke-width="1"/>
+<text x="656" y="246" font-family="Segoe UI,Arial" font-size="8.5" font-weight="600" fill="#C8D0DC" text-anchor="middle">budget.json · saved_searches.json</text>
 
 <!-- Atomic writes note -->
-<rect x="566" y="262" width="180" height="34" rx="5" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1"/>
-<text x="656" y="276" font-family="Segoe UI,Arial" font-size="8" font-weight="700" fill="#15803D" text-anchor="middle">repositories/atomic.py</text>
-<text x="656" y="288" font-family="Segoe UI,Arial" font-size="7.5" fill="#4ADE80" text-anchor="middle">temp → os.replace (POSIX atomic)</text>
+<rect x="566" y="262" width="180" height="34" rx="5" fill="#1B2A22" stroke="#8FB89E" stroke-width="1"/>
+<text x="656" y="276" font-family="Segoe UI,Arial" font-size="8" font-weight="700" fill="#8FB89E" text-anchor="middle">repositories/atomic.py</text>
+<text x="656" y="288" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">temp → os.replace (POSIX atomic)</text>
 
 <!-- Threading lock note -->
-<rect x="566" y="302" width="180" height="22" rx="4" fill="#FAF5FF" stroke="#DDD6FE" stroke-width="1"/>
-<text x="656" y="317" font-family="Segoe UI,Arial" font-size="8" fill="#6D28D9" text-anchor="middle">threading.Lock on career_dna.json writes</text>
+<rect x="566" y="302" width="180" height="22" rx="4" fill="#26223040" stroke="#3B3550" stroke-width="1"/>
+<text x="656" y="317" font-family="Segoe UI,Arial" font-size="8" fill="#A89BC0" text-anchor="middle">threading.Lock on career_dna.json writes</text>
 
 <!-- Static enrichment -->
-<rect x="566" y="332" width="180" height="26" rx="5" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
-<text x="656" y="344" font-family="Segoe UI,Arial" font-size="8.5" font-weight="700" fill="#1D4ED8" text-anchor="middle">data/company_enrichment.json</text>
-<text x="656" y="355" font-family="Segoe UI,Arial" font-size="7.5" fill="#3B82F6" text-anchor="middle">41 companies · TC/levels/interview static</text>
+<rect x="566" y="332" width="180" height="26" rx="5" fill="#1A2230" stroke="#7FA6CC" stroke-width="1"/>
+<text x="656" y="344" font-family="Segoe UI,Arial" font-size="8.5" font-weight="700" fill="#7FA6CC" text-anchor="middle">data/company_enrichment.json</text>
+<text x="656" y="355" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">41 companies · TC/levels/interview static</text>
 
 <!-- ═══════════════════════════════════════════════
      LLM ROUTER
 ═══════════════════════════════════════════════ -->
 
-<rect x="776" y="44" width="158" height="26" rx="5" fill="#DC2626"/>
-<text x="855" y="61" font-family="Segoe UI,Arial" font-size="9" font-weight="700" fill="white" text-anchor="middle">🔒 call_local_only() — Ollama</text>
+<rect x="776" y="44" width="158" height="26" rx="5" fill="#2E1C19" stroke="#CC8073" stroke-width="1"/>
+<text x="855" y="61" font-family="Segoe UI,Arial" font-size="9" font-weight="700" fill="#CC8073" text-anchor="middle">🔒 call_local_only() — Ollama</text>
 
-<rect x="776" y="76" width="158" height="14" rx="3" fill="#FEE2E2" stroke="#FCA5A5" stroke-width="1"/>
-<text x="855" y="87" font-family="Segoe UI,Arial" font-size="7.5" fill="#991B1B" text-anchor="middle">resume, profile, DNA, roadmap → NEVER external</text>
+<rect x="776" y="76" width="158" height="14" rx="3" fill="#2E1C1940" stroke="#CC8073" stroke-width="1"/>
+<text x="855" y="87" font-family="Segoe UI,Arial" font-size="7.5" fill="#CC8073" text-anchor="middle">resume, profile, DNA, roadmap → NEVER external</text>
 
-<rect x="776" y="96" width="158" height="26" rx="5" fill="#F59E0B"/>
-<text x="855" y="113" font-family="Segoe UI,Arial" font-size="9" font-weight="700" fill="white" text-anchor="middle">call_with_mode() — Cloud</text>
+<rect x="776" y="96" width="158" height="26" rx="5" fill="#2A2417" stroke="#CFB573" stroke-width="1"/>
+<text x="855" y="113" font-family="Segoe UI,Arial" font-size="9" font-weight="700" fill="#CFB573" text-anchor="middle">call_with_mode() — Cloud</text>
 
-<rect x="776" y="128" width="158" height="74" rx="5" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1"/>
-<text x="855" y="143" font-family="Segoe UI,Arial" font-size="8" font-weight="700" fill="#92400E" text-anchor="middle">Mode routing (6 modes)</text>
-<text x="855" y="155" font-family="Segoe UI,Arial" font-size="7.5" fill="#B45309" text-anchor="middle">local    → Ollama only</text>
-<text x="855" y="165" font-family="Segoe UI,Arial" font-size="7.5" fill="#B45309" text-anchor="middle">haiku    → Claude Haiku → Ollama fallback</text>
-<text x="855" y="175" font-family="Segoe UI,Arial" font-size="7.5" fill="#B45309" text-anchor="middle">hybrid   → Haiku+Sonnet → Ollama fallback</text>
-<text x="855" y="185" font-family="Segoe UI,Arial" font-size="7.5" fill="#B45309" text-anchor="middle">sonnet   → Claude Sonnet → Ollama fallback</text>
-<text x="855" y="195" font-family="Segoe UI,Arial" font-size="7.5" fill="#B45309" text-anchor="middle">gpt4o/mini → OpenAI → Ollama fallback</text>
+<rect x="776" y="128" width="158" height="74" rx="5" fill="#2A241740" stroke="#CFB573" stroke-width="1"/>
+<text x="855" y="143" font-family="Segoe UI,Arial" font-size="8" font-weight="700" fill="#CFB573" text-anchor="middle">Mode routing (6 modes)</text>
+<text x="855" y="155" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">local    → Ollama only</text>
+<text x="855" y="165" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">haiku    → Claude Haiku → Ollama fallback</text>
+<text x="855" y="175" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">hybrid   → Haiku+Sonnet → Ollama fallback</text>
+<text x="855" y="185" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">sonnet   → Claude Sonnet → Ollama fallback</text>
+<text x="855" y="195" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">gpt4o/mini → OpenAI → Ollama fallback</text>
 
-<rect x="776" y="210" width="158" height="40" rx="5" fill="#FFF7ED" stroke="#FED7AA" stroke-width="1"/>
-<text x="855" y="225" font-family="Segoe UI,Arial" font-size="8" font-weight="700" fill="#92400E" text-anchor="middle">Budget guard (all cloud calls)</text>
-<text x="855" y="236" font-family="Segoe UI,Arial" font-size="7.5" fill="#B45309" text-anchor="middle">check_limit() → BEFORE every call</text>
-<text x="855" y="246" font-family="Segoe UI,Arial" font-size="7.5" fill="#B45309" text-anchor="middle">record_call() → AFTER, updates budget.json</text>
+<rect x="776" y="210" width="158" height="40" rx="5" fill="#2A241740" stroke="#CFB573" stroke-width="1"/>
+<text x="855" y="225" font-family="Segoe UI,Arial" font-size="8" font-weight="700" fill="#CFB573" text-anchor="middle">Budget guard (all cloud calls)</text>
+<text x="855" y="236" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">check_limit() → BEFORE every call</text>
+<text x="855" y="246" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">record_call() → AFTER, updates budget.json</text>
 
-<rect x="776" y="258" width="158" height="44" rx="5" fill="#FFF7ED" stroke="#FED7AA" stroke-width="1"/>
-<text x="855" y="271" font-family="Segoe UI,Arial" font-size="7.5" fill="#92400E" text-anchor="middle">Pricing (per 1M tokens):</text>
-<text x="855" y="283" font-family="Segoe UI,Arial" font-size="7.5" fill="#B45309" text-anchor="middle">Haiku $0.80/$4 · Sonnet $3/$15</text>
-<text x="855" y="295" font-family="Segoe UI,Arial" font-size="7.5" fill="#B45309" text-anchor="middle">GPT-4o $2.50/$10 · mini $0.15/$0.60</text>
+<rect x="776" y="258" width="158" height="44" rx="5" fill="#2A241740" stroke="#CFB573" stroke-width="1"/>
+<text x="855" y="271" font-family="Segoe UI,Arial" font-size="7.5" fill="#CFB573" text-anchor="middle">Pricing (per 1M tokens):</text>
+<text x="855" y="283" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">Haiku $0.80/$4 · Sonnet $3/$15</text>
+<text x="855" y="295" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">GPT-4o $2.50/$10 · mini $0.15/$0.60</text>
 
 <!-- Phase 3 additions to router -->
-<rect x="776" y="308" width="158" height="38" rx="5" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="1"/>
-<text x="855" y="320" font-family="Segoe UI,Arial" font-size="7.5" font-weight="700" fill="#065F46" text-anchor="middle">✅ Phase 3 — new routing functions</text>
-<text x="855" y="331" font-family="Segoe UI,Arial" font-size="7" fill="#059669" text-anchor="middle">call_with_tools() — score_gaps native tool call</text>
-<text x="855" y="341" font-family="Segoe UI,Arial" font-size="7" fill="#059669" text-anchor="middle">debate_gaps() — Advocate / Skeptic / Judge · local-only</text>
+<rect x="776" y="308" width="158" height="38" rx="5" fill="#1B2A22" stroke="#8FB89E" stroke-width="1"/>
+<text x="855" y="320" font-family="Segoe UI,Arial" font-size="7.5" font-weight="700" fill="#8FB89E" text-anchor="middle">✅ Phase 3 — new routing functions</text>
+<text x="855" y="331" font-family="Segoe UI,Arial" font-size="7" fill="#9AA5B5" text-anchor="middle">call_with_tools() — score_gaps native tool call</text>
+<text x="855" y="341" font-family="Segoe UI,Arial" font-size="7" fill="#9AA5B5" text-anchor="middle">debate_gaps() — Advocate / Skeptic / Judge · local-only</text>
 
 <!-- ═══════════════════════════════════════════════
      CAREER DNA (lower left panel)
 ═══════════════════════════════════════════════ -->
 
 <!-- DNA hooks from agents -->
-<rect x="776" y="370" width="158" height="120" rx="6" fill="#2E1065"/>
-<text x="855" y="390" font-family="Segoe UI,Arial" font-size="9" font-weight="700" fill="white" text-anchor="middle">Non-blocking hooks</text>
-<text x="855" y="403" font-family="Segoe UI,Arial" font-size="7.5" fill="#C4B5FD" text-anchor="middle">Gap analysis → init + update_from_gap</text>
-<text x="855" y="415" font-family="Segoe UI,Arial" font-size="7.5" fill="#C4B5FD" text-anchor="middle">STAR ready → update_from_star</text>
-<text x="855" y="427" font-family="Segoe UI,Arial" font-size="7.5" fill="#C4B5FD" text-anchor="middle">Assess calibrate → update_from_assess</text>
-<text x="855" y="439" font-family="Segoe UI,Arial" font-size="7.5" fill="#C4B5FD" text-anchor="middle">Task complete → update_from_learning</text>
-<text x="855" y="451" font-family="Segoe UI,Arial" font-size="7.5" fill="#C4B5FD" text-anchor="middle">Manual UI → add_skill / set_goal</text>
-<text x="855" y="463" font-family="Segoe UI,Arial" font-size="7.5" fill="#A78BFA" text-anchor="middle">Errors never fail the primary request</text>
+<rect x="776" y="370" width="158" height="120" rx="6" fill="#232C38" stroke="#A89BC0" stroke-width="1"/>
+<text x="855" y="390" font-family="Segoe UI,Arial" font-size="9" font-weight="700" fill="#E5E9EF" text-anchor="middle">Non-blocking hooks</text>
+<text x="855" y="403" font-family="Segoe UI,Arial" font-size="7.5" fill="#A89BC0" text-anchor="middle">Gap analysis → init + update_from_gap</text>
+<text x="855" y="415" font-family="Segoe UI,Arial" font-size="7.5" fill="#A89BC0" text-anchor="middle">STAR ready → update_from_star</text>
+<text x="855" y="427" font-family="Segoe UI,Arial" font-size="7.5" fill="#A89BC0" text-anchor="middle">Assess calibrate → update_from_assess</text>
+<text x="855" y="439" font-family="Segoe UI,Arial" font-size="7.5" fill="#A89BC0" text-anchor="middle">Task complete → update_from_learning</text>
+<text x="855" y="451" font-family="Segoe UI,Arial" font-size="7.5" fill="#A89BC0" text-anchor="middle">Manual UI → add_skill / set_goal</text>
+<text x="855" y="463" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">Errors never fail the primary request</text>
 
 <!-- Roadmap gen -->
-<rect x="776" y="498" width="158" height="30" rx="5" fill="#DC2626"/>
-<text x="855" y="512" font-family="Segoe UI,Arial" font-size="9" font-weight="700" fill="white" text-anchor="middle">🔒 Roadmap gen → Ollama only</text>
-<text x="855" y="524" font-family="Segoe UI,Arial" font-size="7.5" fill="#FCA5A5" text-anchor="middle">Personal skill scores stay local</text>
+<rect x="776" y="498" width="158" height="30" rx="5" fill="#2E1C19" stroke="#CC8073" stroke-width="1"/>
+<text x="855" y="512" font-family="Segoe UI,Arial" font-size="9" font-weight="700" fill="#CC8073" text-anchor="middle">🔒 Roadmap gen → Ollama only</text>
+<text x="855" y="524" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">Personal skill scores stay local</text>
 
 <!-- Market signals -->
-<rect x="776" y="534" width="158" height="30" rx="5" fill="#F59E0B"/>
-<text x="855" y="548" font-family="Segoe UI,Arial" font-size="9" font-weight="700" fill="white" text-anchor="middle">Market signals → Claude API</text>
-<text x="855" y="560" font-family="Segoe UI,Arial" font-size="7.5" fill="#451A03" text-anchor="middle">Skill names only (ADR-008) · 24h cache</text>
+<rect x="776" y="534" width="158" height="30" rx="5" fill="#2A2417" stroke="#CFB573" stroke-width="1"/>
+<text x="855" y="548" font-family="Segoe UI,Arial" font-size="9" font-weight="700" fill="#CFB573" text-anchor="middle">Market signals → Claude API</text>
+<text x="855" y="560" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">Skill names only (ADR-008) · 24h cache</text>
 
 <!-- ═══════════════════════════════════════════════
      LLM PROVIDERS (top-right panel)
 ═══════════════════════════════════════════════ -->
 
 <g filter="url(#shm)">
-  <rect x="964" y="44" width="160" height="44" rx="7" fill="#1C1917"/>
-  <text x="1044" y="64" font-family="Segoe UI,Arial" font-size="11" font-weight="800" fill="white" text-anchor="middle">Ollama (local)</text>
-  <text x="1044" y="79" font-family="Segoe UI,Arial" font-size="8.5" fill="#A8A29E" text-anchor="middle">Mistral · llama3.1 · primary + fallback</text>
+  <rect x="964" y="44" width="160" height="44" rx="7" fill="#232C38" stroke="#3B4554" stroke-width="1"/>
+  <text x="1044" y="64" font-family="Segoe UI,Arial" font-size="11" font-weight="800" fill="#E5E9EF" text-anchor="middle">Ollama (local)</text>
+  <text x="1044" y="79" font-family="Segoe UI,Arial" font-size="8.5" fill="#9AA5B5" text-anchor="middle">Mistral · llama3.1 · primary + fallback</text>
 </g>
 
 <g filter="url(#shm)">
-  <rect x="964" y="98" width="160" height="44" rx="7" fill="#CC785C"/>
-  <text x="1044" y="118" font-family="Segoe UI,Arial" font-size="11" font-weight="800" fill="white" text-anchor="middle">Claude API</text>
-  <text x="1044" y="131" font-family="Segoe UI,Arial" font-size="8.5" fill="#FFF" text-anchor="middle">Haiku 4.5 · Sonnet 4 · Keychain</text>
+  <rect x="964" y="98" width="160" height="44" rx="7" fill="#2E2018" stroke="#CC8073" stroke-width="1"/>
+  <text x="1044" y="118" font-family="Segoe UI,Arial" font-size="11" font-weight="800" fill="#D99B82" text-anchor="middle">Claude API</text>
+  <text x="1044" y="131" font-family="Segoe UI,Arial" font-size="8.5" fill="#9AA5B5" text-anchor="middle">Haiku 4.5 · Sonnet 4 · Keychain</text>
 </g>
 
 <g filter="url(#shm)">
-  <rect x="964" y="152" width="160" height="44" rx="7" fill="#19C37D"/>
-  <text x="1044" y="172" font-family="Segoe UI,Arial" font-size="11" font-weight="800" fill="white" text-anchor="middle">OpenAI API</text>
-  <text x="1044" y="185" font-family="Segoe UI,Arial" font-size="8.5" fill="#FFF" text-anchor="middle">GPT-4o · GPT-4o-mini · Keychain</text>
+  <rect x="964" y="152" width="160" height="44" rx="7" fill="#1A2A22" stroke="#8FB89E" stroke-width="1"/>
+  <text x="1044" y="172" font-family="Segoe UI,Arial" font-size="11" font-weight="800" fill="#8FB89E" text-anchor="middle">OpenAI API</text>
+  <text x="1044" y="185" font-family="Segoe UI,Arial" font-size="8.5" fill="#9AA5B5" text-anchor="middle">GPT-4o · GPT-4o-mini · Keychain</text>
 </g>
 
 <!-- Mode → provider lines -->
-<text x="1044" y="220" font-family="Segoe UI,Arial" font-size="7.5" fill="#6B7280" text-anchor="middle">Key storage: macOS Keychain (preferred)</text>
-<text x="1044" y="232" font-family="Segoe UI,Arial" font-size="7.5" fill="#6B7280" text-anchor="middle">cis-anthropic-key · cis-openai-key</text>
-<text x="1044" y="244" font-family="Segoe UI,Arial" font-size="7.5" fill="#6B7280" text-anchor="middle">.env fallback if Keychain unavailable</text>
+<text x="1044" y="220" font-family="Segoe UI,Arial" font-size="7.5" fill="#828D9E" text-anchor="middle">Key storage: macOS Keychain (preferred)</text>
+<text x="1044" y="232" font-family="Segoe UI,Arial" font-size="7.5" fill="#828D9E" text-anchor="middle">cis-anthropic-key · cis-openai-key</text>
+<text x="1044" y="244" font-family="Segoe UI,Arial" font-size="7.5" fill="#828D9E" text-anchor="middle">.env fallback if Keychain unavailable</text>
 
-<rect x="964" y="256" width="160" height="44" rx="5" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1"/>
-<text x="1044" y="272" font-family="Segoe UI,Arial" font-size="8" font-weight="700" fill="#15803D" text-anchor="middle">Fallback chain</text>
-<text x="1044" y="284" font-family="Segoe UI,Arial" font-size="7.5" fill="#4ADE80" text-anchor="middle">Budget exceeded → Ollama</text>
-<text x="1044" y="296" font-family="Segoe UI,Arial" font-size="7.5" fill="#4ADE80" text-anchor="middle">API error → Ollama</text>
+<rect x="964" y="256" width="160" height="44" rx="5" fill="#1B2A22" stroke="#8FB89E" stroke-width="1"/>
+<text x="1044" y="272" font-family="Segoe UI,Arial" font-size="8" font-weight="700" fill="#8FB89E" text-anchor="middle">Fallback chain</text>
+<text x="1044" y="284" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">Budget exceeded → Ollama</text>
+<text x="1044" y="296" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">API error → Ollama</text>
 
 <!-- ═══════════════════════════════════════════════
      EXTERNAL DATA (lower-right panel)
 ═══════════════════════════════════════════════ -->
 
 <g filter="url(#shm)">
-  <rect x="964" y="370" width="160" height="44" rx="7" fill="#1D4ED8"/>
-  <text x="1044" y="390" font-family="Segoe UI,Arial" font-size="10.5" font-weight="800" fill="white" text-anchor="middle">JSearch (RapidAPI)</text>
-  <text x="1044" y="404" font-family="Segoe UI,Arial" font-size="7.5" fill="#BFDBFE" text-anchor="middle">Google Jobs · 100 req/mo free · Keychain key</text>
+  <rect x="964" y="370" width="160" height="44" rx="7" fill="#1A2230" stroke="#7FA6CC" stroke-width="1"/>
+  <text x="1044" y="390" font-family="Segoe UI,Arial" font-size="10.5" font-weight="800" fill="#7FA6CC" text-anchor="middle">JSearch (RapidAPI)</text>
+  <text x="1044" y="404" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">Google Jobs · 100 req/mo free · Keychain key</text>
 </g>
 
 <g filter="url(#shm)">
-  <rect x="964" y="424" width="160" height="44" rx="7" fill="#0F766E"/>
-  <text x="1044" y="444" font-family="Segoe UI,Arial" font-size="10.5" font-weight="800" fill="white" text-anchor="middle">Remotive API</text>
-  <text x="1044" y="458" font-family="Segoe UI,Arial" font-size="7.5" fill="#CCFBF1" text-anchor="middle">Remote tech · no key · 4 req/day</text>
+  <rect x="964" y="424" width="160" height="44" rx="7" fill="#1A2A26" stroke="#7CB5AC" stroke-width="1"/>
+  <text x="1044" y="444" font-family="Segoe UI,Arial" font-size="10.5" font-weight="800" fill="#7CB5AC" text-anchor="middle">Remotive API</text>
+  <text x="1044" y="458" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">Remote tech · no key · 4 req/day</text>
 </g>
 
 <g filter="url(#shm)">
-  <rect x="964" y="478" width="160" height="44" rx="7" fill="#6D28D9"/>
-  <text x="1044" y="498" font-family="Segoe UI,Arial" font-size="10.5" font-weight="800" fill="white" text-anchor="middle">Apify (levels.fyi)</text>
-  <text x="1044" y="512" font-family="Segoe UI,Arial" font-size="7.5" fill="#DDD6FE" text-anchor="middle">TC ranges · levels · interview · ~$1.50/mo</text>
+  <rect x="964" y="478" width="160" height="44" rx="7" fill="#262030" stroke="#A89BC0" stroke-width="1"/>
+  <text x="1044" y="498" font-family="Segoe UI,Arial" font-size="10.5" font-weight="800" fill="#A89BC0" text-anchor="middle">Apify (levels.fyi)</text>
+  <text x="1044" y="512" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">TC ranges · levels · interview · ~$1.50/mo</text>
 </g>
 
-<rect x="964" y="532" width="160" height="30" rx="5" fill="#FFF7ED" stroke="#FED7AA" stroke-width="1"/>
-<text x="1044" y="546" font-family="Segoe UI,Arial" font-size="8" font-weight="700" fill="#92400E" text-anchor="middle">Security: keys in headers only</text>
-<text x="1044" y="558" font-family="Segoe UI,Arial" font-size="7.5" fill="#B45309" text-anchor="middle">Generic queries · never profile data</text>
+<rect x="964" y="532" width="160" height="30" rx="5" fill="#2A2417" stroke="#CFB573" stroke-width="1"/>
+<text x="1044" y="546" font-family="Segoe UI,Arial" font-size="8" font-weight="700" fill="#CFB573" text-anchor="middle">Security: keys in headers only</text>
+<text x="1044" y="558" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">Generic queries · never profile data</text>
 
 <!-- ═══════════════════════════════════════════════
      DATA FILES (rightmost column)
 ═══════════════════════════════════════════════ -->
 
-<rect x="1154" y="44"  width="146" height="60" rx="5" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
-<text x="1227" y="62" font-family="Segoe UI,Arial" font-size="8.5" font-weight="700" fill="#374151" text-anchor="middle">profiles/</text>
-<text x="1227" y="74" font-family="Segoe UI,Arial" font-size="7.5" fill="#6B7280" text-anchor="middle">career_profile.json (SHA-256 cached)</text>
-<text x="1227" y="84" font-family="Segoe UI,Arial" font-size="7.5" fill="#6B7280" text-anchor="middle">career_dna.json (living profile)</text>
-<text x="1227" y="94" font-family="Segoe UI,Arial" font-size="7.5" fill="#6B7280" text-anchor="middle">budget.json · learning_plan.json</text>
+<rect x="1154" y="44"  width="146" height="60" rx="5" fill="#1F2630" stroke="#3B4554" stroke-width="1"/>
+<text x="1227" y="62" font-family="Segoe UI,Arial" font-size="8.5" font-weight="700" fill="#C8D0DC" text-anchor="middle">profiles/</text>
+<text x="1227" y="74" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">career_profile.json (SHA-256 cached)</text>
+<text x="1227" y="84" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">career_dna.json (living profile)</text>
+<text x="1227" y="94" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">budget.json · learning_plan.json</text>
 
-<rect x="1154" y="112" width="146" height="50" rx="5" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
-<text x="1227" y="130" font-family="Segoe UI,Arial" font-size="8.5" font-weight="700" fill="#374151" text-anchor="middle">profiles/jobs/{id}/</text>
-<text x="1227" y="142" font-family="Segoe UI,Arial" font-size="7.5" fill="#6B7280" text-anchor="middle">meta.json · gap_report.json</text>
-<text x="1227" y="154" font-family="Segoe UI,Arial" font-size="7.5" fill="#6B7280" text-anchor="middle">stars.json · assessment.json</text>
+<rect x="1154" y="112" width="146" height="50" rx="5" fill="#1F2630" stroke="#3B4554" stroke-width="1"/>
+<text x="1227" y="130" font-family="Segoe UI,Arial" font-size="8.5" font-weight="700" fill="#C8D0DC" text-anchor="middle">profiles/jobs/{id}/</text>
+<text x="1227" y="142" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">meta.json · gap_report.json</text>
+<text x="1227" y="154" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">stars.json · assessment.json</text>
 
-<rect x="1154" y="170" width="146" height="36" rx="5" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
-<text x="1227" y="188" font-family="Segoe UI,Arial" font-size="8.5" font-weight="700" fill="#374151" text-anchor="middle">profiles/jobs_hub/cache/</text>
-<text x="1227" y="200" font-family="Segoe UI,Arial" font-size="7.5" fill="#6B7280" text-anchor="middle">jobs_cache.json (JSearch+Remotive+Apify)</text>
+<rect x="1154" y="170" width="146" height="36" rx="5" fill="#1F2630" stroke="#3B4554" stroke-width="1"/>
+<text x="1227" y="188" font-family="Segoe UI,Arial" font-size="8.5" font-weight="700" fill="#C8D0DC" text-anchor="middle">profiles/jobs_hub/cache/</text>
+<text x="1227" y="200" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">jobs_cache.json (JSearch+Remotive+Apify)</text>
 
-<rect x="1154" y="214" width="146" height="36" rx="5" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
-<text x="1227" y="232" font-family="Segoe UI,Arial" font-size="8.5" font-weight="700" fill="#1D4ED8" text-anchor="middle">data/company_enrichment.json</text>
-<text x="1227" y="244" font-family="Segoe UI,Arial" font-size="7.5" fill="#3B82F6" text-anchor="middle">41 companies · TC/levels (static fallback)</text>
+<rect x="1154" y="214" width="146" height="36" rx="5" fill="#1A2230" stroke="#7FA6CC" stroke-width="1"/>
+<text x="1227" y="232" font-family="Segoe UI,Arial" font-size="8.5" font-weight="700" fill="#7FA6CC" text-anchor="middle">data/company_enrichment.json</text>
+<text x="1227" y="244" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">41 companies · TC/levels (static fallback)</text>
 
-<rect x="1154" y="258" width="146" height="30" rx="5" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="1"/>
-<text x="1227" y="274" font-family="Segoe UI,Arial" font-size="8.5" font-weight="700" fill="#374151" text-anchor="middle">security scan reports/</text>
-<text x="1227" y="282" font-family="Segoe UI,Arial" font-size="7.5" fill="#6B7280" text-anchor="middle">pip-audit · bandit · safety</text>
+<rect x="1154" y="258" width="146" height="30" rx="5" fill="#1F2630" stroke="#3B4554" stroke-width="1"/>
+<text x="1227" y="274" font-family="Segoe UI,Arial" font-size="8.5" font-weight="700" fill="#C8D0DC" text-anchor="middle">security scan reports/</text>
+<text x="1227" y="282" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">pip-audit · bandit · safety</text>
 
 <!-- Test count badge -->
-<rect x="1154" y="296" width="146" height="40" rx="5" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1"/>
-<text x="1227" y="313" font-family="Segoe UI,Arial" font-size="11" font-weight="800" fill="#15803D" text-anchor="middle">298 tests passing</text>
-<text x="1227" y="326" font-family="Segoe UI,Arial" font-size="7.5" fill="#4ADE80" text-anchor="middle">unit · api · integration</text>
+<rect x="1154" y="296" width="146" height="40" rx="5" fill="#1B2A22" stroke="#8FB89E" stroke-width="1"/>
+<text x="1227" y="313" font-family="Segoe UI,Arial" font-size="11" font-weight="800" fill="#8FB89E" text-anchor="middle">298 tests passing</text>
+<text x="1227" y="326" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">unit · api · integration</text>
 
 <!-- ═══════════════════════════════════════════════
      ARROWS — Browser → API  (curved bezier paths)
@@ -509,60 +510,60 @@ svg { display:block; width:100%; height:auto; }
 <!-- ═══════════════════════════════════════════════
      ADR badges
 ═══════════════════════════════════════════════ -->
-<rect x="20" y="395" width="98" height="32" rx="5" fill="#FEF2F2" stroke="#FECACA" stroke-width="1"/>
-<text x="69" y="407" font-family="Segoe UI,Arial" font-size="7.5" font-weight="700" fill="#991B1B" text-anchor="middle">ADR-007: Local-first</text>
-<text x="69" y="418" font-family="Segoe UI,Arial" font-size="7" fill="#DC2626" text-anchor="middle">Resume → Ollama only</text>
+<rect x="20" y="395" width="98" height="32" rx="5" fill="#2E1C19" stroke="#CC8073" stroke-width="1"/>
+<text x="69" y="407" font-family="Segoe UI,Arial" font-size="7.5" font-weight="700" fill="#CC8073" text-anchor="middle">ADR-007: Local-first</text>
+<text x="69" y="418" font-family="Segoe UI,Arial" font-size="7" fill="#9AA5B5" text-anchor="middle">Resume → Ollama only</text>
 
-<rect x="20" y="434" width="98" height="32" rx="5" fill="#FFF7ED" stroke="#FED7AA" stroke-width="1"/>
-<text x="69" y="446" font-family="Segoe UI,Arial" font-size="7.5" font-weight="700" fill="#92400E" text-anchor="middle">ADR-008: Market signals</text>
-<text x="69" y="457" font-family="Segoe UI,Arial" font-size="7" fill="#B45309" text-anchor="middle">Skill names only to Claude</text>
+<rect x="20" y="434" width="98" height="32" rx="5" fill="#2A2417" stroke="#CFB573" stroke-width="1"/>
+<text x="69" y="446" font-family="Segoe UI,Arial" font-size="7.5" font-weight="700" fill="#CFB573" text-anchor="middle">ADR-008: Market signals</text>
+<text x="69" y="457" font-family="Segoe UI,Arial" font-size="7" fill="#9AA5B5" text-anchor="middle">Skill names only to Claude</text>
 
-<rect x="20" y="473" width="98" height="32" rx="5" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1"/>
-<text x="69" y="485" font-family="Segoe UI,Arial" font-size="7.5" font-weight="700" fill="#15803D" text-anchor="middle">ADR-003: LLM routing</text>
-<text x="69" y="496" font-family="Segoe UI,Arial" font-size="7" fill="#4ADE80" text-anchor="middle">Mode from state, never Config</text>
+<rect x="20" y="473" width="98" height="32" rx="5" fill="#1B2A22" stroke="#8FB89E" stroke-width="1"/>
+<text x="69" y="485" font-family="Segoe UI,Arial" font-size="7.5" font-weight="700" fill="#8FB89E" text-anchor="middle">ADR-003: LLM routing</text>
+<text x="69" y="496" font-family="Segoe UI,Arial" font-size="7" fill="#9AA5B5" text-anchor="middle">Mode from state, never Config</text>
 
-<rect x="20" y="512" width="98" height="32" rx="5" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="1"/>
-<text x="69" y="524" font-family="Segoe UI,Arial" font-size="7.5" font-weight="700" fill="#1D4ED8" text-anchor="middle">Job API security</text>
-<text x="69" y="535" font-family="Segoe UI,Arial" font-size="7" fill="#3B82F6" text-anchor="middle">Keys in headers · PII strip</text>
+<rect x="20" y="512" width="98" height="32" rx="5" fill="#1A2230" stroke="#7FA6CC" stroke-width="1"/>
+<text x="69" y="524" font-family="Segoe UI,Arial" font-size="7.5" font-weight="700" fill="#7FA6CC" text-anchor="middle">Job API security</text>
+<text x="69" y="535" font-family="Segoe UI,Arial" font-size="7" fill="#9AA5B5" text-anchor="middle">Keys in headers · PII strip</text>
 
 <!-- ═══════════════════════════════════════════════
      PHASE 3 — PLANNED
 ═══════════════════════════════════════════════ -->
-<line x1="10" y1="700" x2="1310" y2="700" stroke="#E2E8F0" stroke-width="1.5" stroke-dasharray="8 4"/>
-<rect x="10" y="706" width="1300" height="118" rx="8" fill="#FFFBEB" stroke="#FDE68A" stroke-width="1.5" stroke-dasharray="6 3"/>
-<text x="655" y="724" font-family="Segoe UI,Arial" font-size="9.5" font-weight="700" fill="#059669" text-anchor="middle" letter-spacing=".1em">🚀  PHASE 3 — 2 of 4 Complete</text>
+<line x1="10" y1="700" x2="1310" y2="700" stroke="#2C3542" stroke-width="1.5" stroke-dasharray="8 4"/>
+<rect x="10" y="706" width="1300" height="118" rx="8" fill="#2A241740" stroke="#CFB573" stroke-width="1.5" stroke-dasharray="6 3"/>
+<text x="655" y="724" font-family="Segoe UI,Arial" font-size="9.5" font-weight="700" fill="#CFB573" text-anchor="middle" letter-spacing=".1em">🚀  PHASE 3 — 2 of 4 Complete</text>
 
 <!-- pgvector -->
-<rect x="20" y="730" width="308" height="86" rx="6" fill="#EDE9FE" stroke="#DDD6FE" stroke-width="1"/>
-<text x="174" y="749" font-family="Segoe UI,Arial" font-size="10" font-weight="700" fill="#5B21B6" text-anchor="middle">🔍 pgvector Semantic Search</text>
-<text x="174" y="762" font-family="Segoe UI,Arial" font-size="8" fill="#7C3AED" text-anchor="middle">star_embeddings + skill_journal_embeddings</text>
-<text x="174" y="774" font-family="Segoe UI,Arial" font-size="8" fill="#7C3AED" text-anchor="middle">Surface best STAR story per interview question</text>
-<text x="174" y="786" font-family="Segoe UI,Arial" font-size="7.5" fill="#A78BFA" text-anchor="middle">PostgreSQL + pgvector · Additive layer</text>
-<text x="174" y="797" font-family="Segoe UI,Arial" font-size="7" fill="#A78BFA" text-anchor="middle">JSON profiles remain source of truth (ADR-007 unchanged)</text>
+<rect x="20" y="730" width="308" height="86" rx="6" fill="#262030" stroke="#A89BC0" stroke-width="1"/>
+<text x="174" y="749" font-family="Segoe UI,Arial" font-size="10" font-weight="700" fill="#C3B8D6" text-anchor="middle">🔍 pgvector Semantic Search</text>
+<text x="174" y="762" font-family="Segoe UI,Arial" font-size="8" fill="#A89BC0" text-anchor="middle">star_embeddings + skill_journal_embeddings</text>
+<text x="174" y="774" font-family="Segoe UI,Arial" font-size="8" fill="#A89BC0" text-anchor="middle">Surface best STAR story per interview question</text>
+<text x="174" y="786" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">PostgreSQL + pgvector · Additive layer</text>
+<text x="174" y="797" font-family="Segoe UI,Arial" font-size="7" fill="#9AA5B5" text-anchor="middle">JSON profiles remain source of truth (ADR-007 unchanged)</text>
 
 <!-- Tool calling — DONE ✅ -->
-<rect x="338" y="730" width="308" height="86" rx="6" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1.5"/>
-<text x="492" y="749" font-family="Segoe UI,Arial" font-size="10" font-weight="700" fill="#15803D" text-anchor="middle">✅ Tool / Function Calling Node</text>
-<text x="492" y="762" font-family="Segoe UI,Arial" font-size="8" fill="#166534" text-anchor="middle">score_gaps: static market data → all modes (free)</text>
-<text x="492" y="774" font-family="Segoe UI,Arial" font-size="8" fill="#166534" text-anchor="middle">Cloud modes: native Claude / OpenAI tool calling</text>
-<text x="492" y="786" font-family="Segoe UI,Arial" font-size="7.5" fill="#16A34A" text-anchor="middle">market_context_tool · JSearch live · static fallback</text>
-<text x="492" y="797" font-family="Segoe UI,Arial" font-size="7" fill="#16A34A" text-anchor="middle">call_with_tools() · tool_cache dedup · max 5 rounds</text>
+<rect x="338" y="730" width="308" height="86" rx="6" fill="#1B2A22" stroke="#8FB89E" stroke-width="1.5"/>
+<text x="492" y="749" font-family="Segoe UI,Arial" font-size="10" font-weight="700" fill="#8FB89E" text-anchor="middle">✅ Tool / Function Calling Node</text>
+<text x="492" y="762" font-family="Segoe UI,Arial" font-size="8" fill="#C8D0DC" text-anchor="middle">score_gaps: static market data → all modes (free)</text>
+<text x="492" y="774" font-family="Segoe UI,Arial" font-size="8" fill="#C8D0DC" text-anchor="middle">Cloud modes: native Claude / OpenAI tool calling</text>
+<text x="492" y="786" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">market_context_tool · JSearch live · static fallback</text>
+<text x="492" y="797" font-family="Segoe UI,Arial" font-size="7" fill="#9AA5B5" text-anchor="middle">call_with_tools() · tool_cache dedup · max 5 rounds</text>
 
 <!-- Two-model verification — DONE ✅ -->
-<rect x="656" y="730" width="308" height="86" rx="6" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1.5"/>
-<text x="810" y="749" font-family="Segoe UI,Arial" font-size="10" font-weight="700" fill="#15803D" text-anchor="middle">✅ Agentic Debate Verify (verify_gaps)</text>
-<text x="810" y="762" font-family="Segoe UI,Arial" font-size="8" fill="#166534" text-anchor="middle">6th node: score_gaps → verify_gaps → generate_report</text>
-<text x="810" y="774" font-family="Segoe UI,Arial" font-size="8" fill="#166534" text-anchor="middle">Critical + confidence ≠ high → Advocate / Skeptic / Judge</text>
-<text x="810" y="786" font-family="Segoe UI,Arial" font-size="7.5" fill="#16A34A" text-anchor="middle">Model decides rounds (≤3) · local-only (Ollama, ADR-007)</text>
-<text x="810" y="797" font-family="Segoe UI,Arial" font-size="7" fill="#16A34A" text-anchor="middle">Audit trail: rounds · advocate/skeptic/judge · consensus</text>
+<rect x="656" y="730" width="308" height="86" rx="6" fill="#1B2A22" stroke="#8FB89E" stroke-width="1.5"/>
+<text x="810" y="749" font-family="Segoe UI,Arial" font-size="10" font-weight="700" fill="#8FB89E" text-anchor="middle">✅ Agentic Debate Verify (verify_gaps)</text>
+<text x="810" y="762" font-family="Segoe UI,Arial" font-size="8" fill="#C8D0DC" text-anchor="middle">6th node: score_gaps → verify_gaps → generate_report</text>
+<text x="810" y="774" font-family="Segoe UI,Arial" font-size="8" fill="#C8D0DC" text-anchor="middle">Critical + confidence ≠ high → Advocate / Skeptic / Judge</text>
+<text x="810" y="786" font-family="Segoe UI,Arial" font-size="7.5" fill="#9AA5B5" text-anchor="middle">Model decides rounds (≤3) · local-only (Ollama, ADR-007)</text>
+<text x="810" y="797" font-family="Segoe UI,Arial" font-size="7" fill="#9AA5B5" text-anchor="middle">Audit trail: rounds · advocate/skeptic/judge · consensus</text>
 
 <!-- n8n -->
-<rect x="974" y="730" width="328" height="86" rx="6" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1"/>
-<text x="1138" y="749" font-family="Segoe UI,Arial" font-size="10" font-weight="700" fill="#15803D" text-anchor="middle">🔗 n8n Integration</text>
-<text x="1138" y="762" font-family="Segoe UI,Arial" font-size="8" fill="#166534" text-anchor="middle">External trigger layer — n8n calls CIP, never vice versa</text>
-<text x="1138" y="774" font-family="Segoe UI,Arial" font-size="8" fill="#166534" text-anchor="middle">Daily Apify runs · Slack digest · Calendar blocks</text>
-<text x="1138" y="786" font-family="Segoe UI,Arial" font-size="7.5" fill="#16A34A" text-anchor="middle">Clean enterprise boundary: automation vs. intelligence</text>
-<text x="1138" y="797" font-family="Segoe UI,Arial" font-size="7" fill="#16A34A" text-anchor="middle">GitHub Actions CI when open-sourced or team-shared</text>
+<rect x="974" y="730" width="328" height="86" rx="6" fill="#1F2630" stroke="#3B4554" stroke-width="1"/>
+<text x="1138" y="749" font-family="Segoe UI,Arial" font-size="10" font-weight="700" fill="#C8D0DC" text-anchor="middle">🔗 n8n Integration</text>
+<text x="1138" y="762" font-family="Segoe UI,Arial" font-size="8" fill="#9AA5B5" text-anchor="middle">External trigger layer — n8n calls CIP, never vice versa</text>
+<text x="1138" y="774" font-family="Segoe UI,Arial" font-size="8" fill="#9AA5B5" text-anchor="middle">Daily Apify runs · Slack digest · Calendar blocks</text>
+<text x="1138" y="786" font-family="Segoe UI,Arial" font-size="7.5" fill="#828D9E" text-anchor="middle">Clean enterprise boundary: automation vs. intelligence</text>
+<text x="1138" y="797" font-family="Segoe UI,Arial" font-size="7" fill="#828D9E" text-anchor="middle">GitHub Actions CI when open-sourced or team-shared</text>
 
 </svg>
   </div>
