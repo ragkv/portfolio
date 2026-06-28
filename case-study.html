@@ -19,27 +19,30 @@
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Josefin+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#0B1120;--panel:#131A2A;--panel2:#1B2333;--line:#2A3344;
-  --text:#E6EAF2;--text2:#9AA7BD;--text3:#6B7689;
-  --blue:#60A5FA;--teal:#2DD4BF;--amber:#FBBF24;--purple:#A78BFA;--green:#4ADE80;--red:#F87171;--orange:#FB923C;
-  --grad:linear-gradient(135deg,#4F46E5 0%,#7C3AED 55%,#2563EB 100%);
-  --sans:'Plus Jakarta Sans',ui-sans-serif,system-ui,-apple-system,Arial,sans-serif;
+  /* Slate Intelligence palette — matches the redesigned app */
+  --bg:#12161C;--panel:#181D25;--panel2:#1F2630;--line:#2C3542;
+  --text:#E5E9EF;--text2:#9AA5B5;--text3:#828D9E;
+  --blue:#7FA6CC;--teal:#7CB5AC;--amber:#CFB573;--purple:#A89BC0;--green:#8FB89E;--red:#CC8073;--orange:#CC9070;
+  --brand:#CFB573;
+  --grad:linear-gradient(135deg,#7FA6CC 0%,#A89BC0 55%,#CC9070 100%);
+  --sans:'Josefin Sans',ui-sans-serif,system-ui,-apple-system,Arial,sans-serif;
+  --display:'Fraunces',Georgia,'Times New Roman',serif;
   --mono:'JetBrains Mono',ui-monospace,monospace;
 }
 body{font-family:var(--sans);background:
-  radial-gradient(1100px 520px at 100% -5%,rgba(124,58,237,.10),transparent 60%),
-  radial-gradient(900px 480px at -10% 8%,rgba(37,99,235,.10),transparent 55%),var(--bg);
+  radial-gradient(1100px 520px at 100% -5%,rgba(207,181,115,.08),transparent 60%),
+  radial-gradient(900px 480px at -10% 8%,rgba(127,166,204,.08),transparent 55%),var(--bg);
   color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
 .wrap{max-width:1080px;margin:0 auto;padding:0 24px}
 a{color:var(--blue);text-decoration:none}
 
 .hero{padding:64px 0 36px;text-align:center}
 .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--text3);margin-bottom:14px}
-.hero h1{font-size:40px;font-weight:800;letter-spacing:-1px;line-height:1.1}
+.hero h1{font-family:var(--display);font-size:42px;font-weight:600;letter-spacing:-.8px;line-height:1.08}
 .hero h1 .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .tag{font-size:17px;color:var(--text2);max-width:680px;margin:16px auto 0}
 .chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:22px auto 0;max-width:760px}
@@ -73,7 +76,7 @@ a{color:var(--blue);text-decoration:none}
 .shot{display:block;width:100%;height:auto}
 .mock{display:none}
 .caption .num{font-family:var(--mono);font-size:13px;font-weight:600;color:var(--purple)}
-.caption h3{font-size:22px;font-weight:800;letter-spacing:-.4px;margin:6px 0 8px}
+.caption h3{font-family:var(--display);font-size:23px;font-weight:600;letter-spacing:-.3px;margin:6px 0 8px}
 .caption p{font-size:14.5px;color:var(--text2)}
 .eng{margin-top:12px;font-size:12.5px;color:var(--text);background:var(--panel);border:1px solid var(--line);border-radius:9px;padding:9px 12px}
 .eng b{color:var(--teal)}
@@ -130,6 +133,13 @@ footer{border-top:1px solid var(--line);margin-top:40px;padding:30px 0 60px;text
 <div class="wrap">
 
   <header class="hero">
+    <svg width="48" height="48" viewBox="0 0 56 56" aria-hidden="true" style="display:block;margin:0 auto 16px">
+      <circle cx="28" cy="28" r="26" fill="#181D25" stroke="#2C3542" stroke-width="2"/>
+      <path d="M28 6 L33 23 L28 28 L23 23 Z" fill="#CFB573"/>
+      <path d="M50 28 L33 33 L28 28 L33 23 Z" fill="#CC9070"/>
+      <path d="M28 50 L23 33 L28 28 L33 33 Z" fill="#8FB89E"/>
+      <path d="M6 28 L23 23 L28 28 L23 33 Z" fill="#7FA6CC"/>
+    </svg>
     <div class="eyebrow">Personal Project · AI Engineering</div>
     <h1>Career Intelligence <span class="g">Platform</span></h1>
     <p class="tag">A local-first, multi-agent LLM platform that scores your resume against a job with evidence-backed gap analysis, then helps you close the gaps. Built the way I build backend systems, not the way demos are built.</p>

@@ -13,22 +13,24 @@
 -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Josefin+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 @property --p{syntax:'<number>';inherits:false;initial-value:0}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --bg:#0B1120;--panel:#131A2A;--panel2:#1B2333;--line:#2A3344;
-  --text:#EAEEF6;--text2:#A6B2C6;--text3:#74809A;
-  --blue:#60A5FA;--teal:#2DD4BF;--amber:#FBBF24;--purple:#A78BFA;--green:#4ADE80;--red:#F87171;--orange:#FB923C;
-  --grad:linear-gradient(135deg,#4F46E5,#7C3AED 55%,#2563EB);
-  --sans:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;--mono:'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,monospace;
+  /* Slate Intelligence palette — matches the redesigned app */
+  --bg:#12161C;--panel:#181D25;--panel2:#1F2630;--line:#2C3542;
+  --text:#E5E9EF;--text2:#9AA5B5;--text3:#828D9E;
+  --blue:#7FA6CC;--teal:#7CB5AC;--amber:#CFB573;--purple:#A89BC0;--green:#8FB89E;--red:#CC8073;--orange:#CC9070;
+  --brand:#CFB573;
+  --grad:linear-gradient(135deg,#7FA6CC,#A89BC0 55%,#CC9070);
+  --sans:'Josefin Sans',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Arial,sans-serif;--display:'Fraunces',Georgia,serif;--mono:'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,monospace;
   --e:cubic-bezier(.16,1,.3,1);
 }
 html{-webkit-text-size-adjust:100%}
 body{font-family:var(--sans);background:
-  radial-gradient(1100px 520px at 100% -5%,rgba(124,58,237,.10),transparent 60%),
-  radial-gradient(900px 480px at -10% 8%,rgba(37,99,235,.10),transparent 55%),var(--bg);
+  radial-gradient(1100px 520px at 100% -5%,rgba(207,181,115,.08),transparent 60%),
+  radial-gradient(900px 480px at -10% 8%,rgba(127,166,204,.08),transparent 55%),var(--bg);
   color:var(--text);line-height:1.55;
   -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;
   font-feature-settings:"kern" 1,"liga" 1}
@@ -36,7 +38,7 @@ body{font-family:var(--sans);background:
 .wrap{max-width:760px;margin:0 auto;padding:0 20px}
 .head{text-align:center;padding:54px 0 26px}
 .head .eb{font-family:var(--mono);font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--text3)}
-.head h1{font-size:34px;font-weight:800;letter-spacing:-.8px;margin:10px 0 6px}
+.head h1{font-family:var(--display);font-size:38px;font-weight:600;letter-spacing:-.5px;margin:10px 0 6px}
 .head h1 .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .head p{color:var(--text2);font-size:15px}
 .head .playall{margin-top:18px;background:var(--grad);color:#fff;border:none;border-radius:10px;padding:10px 20px;font-weight:700;font-size:14px;cursor:pointer;font-family:var(--sans)}
@@ -72,7 +74,7 @@ body{font-family:var(--sans);background:
 /* coach */
 .bub{max-width:86%;border-radius:11px;padding:9px 12px;font-size:12.5px;margin-bottom:9px;opacity:0;transform:translateY(8px)}
 .bub.show{opacity:1;transform:none;transition:all .4s var(--e)}
-.bub.u{margin-left:auto;background:rgba(167,139,250,.18);border:1px solid rgba(167,139,250,.34)}
+.bub.u{margin-left:auto;background:rgba(168,155,192,.18);border:1px solid rgba(168,155,192,.34)}
 .bub.a{background:var(--panel2);border:1px solid var(--line)}
 .think{display:inline-flex;gap:4px;vertical-align:middle}.think i{width:6px;height:6px;border-radius:50%;background:var(--text3);animation:blink 1s infinite}
 .think i:nth-child(2){animation-delay:.2s}.think i:nth-child(3){animation-delay:.4s}
@@ -143,6 +145,13 @@ body{font-family:var(--sans);background:
 <body>
 <div class="wrap">
   <div class="head">
+    <svg width="46" height="46" viewBox="0 0 56 56" aria-hidden="true" style="display:block;margin:0 auto 14px">
+      <circle cx="28" cy="28" r="26" fill="#181D25" stroke="#2C3542" stroke-width="2"/>
+      <path d="M28 6 L33 23 L28 28 L23 23 Z" fill="#CFB573"/>
+      <path d="M50 28 L33 33 L28 28 L33 23 Z" fill="#CC9070"/>
+      <path d="M28 50 L23 33 L28 28 L33 33 Z" fill="#8FB89E"/>
+      <path d="M6 28 L23 23 L28 28 L23 33 Z" fill="#7FA6CC"/>
+    </svg>
     <div class="eb">Career Intelligence Platform · Agent Demos</div>
     <h1>The agents, <span class="g">in motion</span></h1>
     <p>Each panel animates as it plays. Screen-record any one to get a video clip.</p>
@@ -241,7 +250,7 @@ body{font-family:var(--sans);background:
           <g class="dna-node" style="--i:4"><circle cx="44" cy="148" r="15" fill="rgba(74,222,128,.25)" stroke="var(--green)"/><text x="44" y="152" text-anchor="middle">REST</text></g>
           <g class="dna-node" style="--i:5"><circle cx="44" cy="72" r="15" fill="rgba(167,139,250,.25)" stroke="var(--purple)"/><text x="44" y="76" text-anchor="middle">Agent</text></g>
           <g class="dna-center"><circle cx="110" cy="110" r="26" fill="url(#g)"/><text x="110" y="108" text-anchor="middle" font-size="9" fill="#fff" font-weight="700" font-family="'Plus Jakarta Sans'">YOU</text><text x="110" y="119" text-anchor="middle" font-size="7" fill="rgba(255,255,255,.75)">SE III</text></g>
-          <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4F46E5"/><stop offset="1" stop-color="#7C3AED"/></linearGradient></defs>
+          <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7FA6CC"/><stop offset="1" stop-color="#A89BC0"/></linearGradient></defs>
         </svg>
         <div style="flex:1;min-width:180px">
           <div class="pl">Living profile</div>
