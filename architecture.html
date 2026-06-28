@@ -24,7 +24,7 @@ svg { display:block; width:100%; height:auto; }
   <div class="hdr">
     <div class="hdr-left">
       <h1>🧠 <em>Career Intelligence Platform</em> — Architecture v6.0</h1>
-      <p>Python · LangGraph · FastAPI · Vanilla JS (ES modules) · Ollama · Claude API · OpenAI API &nbsp;·&nbsp; 217 tests · ADR-007 local-first · Phase 3: Tool Calling ✅ · Two-Model Verification ✅</p>
+      <p>Python · LangGraph · FastAPI · Vanilla JS (ES modules) · Ollama · Claude API · OpenAI API &nbsp;·&nbsp; 298 tests · ADR-007 local-first · Phase 3: Tool Calling ✅ · Agentic Debate Verify ✅</p>
     </div>
     <div class="legend">
       <div class="leg"><div class="ld" style="background:#0D9488"></div>Active (live)</div>
@@ -187,7 +187,7 @@ svg { display:block; width:100%; height:auto; }
   <text x="426" y="61" font-family="Segoe UI,Arial" font-size="10" font-weight="700" fill="white" text-anchor="middle">AnalysisService → GapAgent (6-node)</text>
   <text x="426" y="74" font-family="Segoe UI,Arial" font-size="8" fill="#5EEAD4" text-anchor="middle">parse_resume → parse_jd → extract_skills</text>
   <text x="426" y="86" font-family="Segoe UI,Arial" font-size="8" fill="#F6AD55" text-anchor="middle">→ score_gaps ✦ → verify_gaps ✦ → generate_report</text>
-  <text x="426" y="96" font-family="Segoe UI,Arial" font-size="7.5" fill="#68D391" text-anchor="middle">✦ Phase 3: market context · two-model consensus</text>
+  <text x="426" y="96" font-family="Segoe UI,Arial" font-size="7.5" fill="#68D391" text-anchor="middle">✦ Phase 3: market-context tool · agentic debate verify</text>
 </g>
 
 <!-- Mutation Service -->
@@ -325,7 +325,7 @@ svg { display:block; width:100%; height:auto; }
 <rect x="776" y="308" width="158" height="38" rx="5" fill="#ECFDF5" stroke="#6EE7B7" stroke-width="1"/>
 <text x="855" y="320" font-family="Segoe UI,Arial" font-size="7.5" font-weight="700" fill="#065F46" text-anchor="middle">✅ Phase 3 — new routing functions</text>
 <text x="855" y="331" font-family="Segoe UI,Arial" font-size="7" fill="#059669" text-anchor="middle">call_with_tools() — score_gaps native tool call</text>
-<text x="855" y="341" font-family="Segoe UI,Arial" font-size="7" fill="#059669" text-anchor="middle">call_verify_model() — Sonnet→Haiku→GPT-4o→Ollama</text>
+<text x="855" y="341" font-family="Segoe UI,Arial" font-size="7" fill="#059669" text-anchor="middle">debate_gaps() — Advocate / Skeptic / Judge · local-only</text>
 
 <!-- ═══════════════════════════════════════════════
      CAREER DNA (lower left panel)
@@ -438,7 +438,7 @@ svg { display:block; width:100%; height:auto; }
 
 <!-- Test count badge -->
 <rect x="1154" y="296" width="146" height="40" rx="5" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1"/>
-<text x="1227" y="313" font-family="Segoe UI,Arial" font-size="11" font-weight="800" fill="#15803D" text-anchor="middle">217 tests passing</text>
+<text x="1227" y="313" font-family="Segoe UI,Arial" font-size="11" font-weight="800" fill="#15803D" text-anchor="middle">298 tests passing</text>
 <text x="1227" y="326" font-family="Segoe UI,Arial" font-size="7.5" fill="#4ADE80" text-anchor="middle">unit · api · integration</text>
 
 <!-- ═══════════════════════════════════════════════
@@ -550,11 +550,11 @@ svg { display:block; width:100%; height:auto; }
 
 <!-- Two-model verification — DONE ✅ -->
 <rect x="656" y="730" width="308" height="86" rx="6" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1.5"/>
-<text x="810" y="749" font-family="Segoe UI,Arial" font-size="10" font-weight="700" fill="#15803D" text-anchor="middle">✅ Two-Model Verification (verify_gaps)</text>
+<text x="810" y="749" font-family="Segoe UI,Arial" font-size="10" font-weight="700" fill="#15803D" text-anchor="middle">✅ Agentic Debate Verify (verify_gaps)</text>
 <text x="810" y="762" font-family="Segoe UI,Arial" font-size="8" fill="#166534" text-anchor="middle">6th node: score_gaps → verify_gaps → generate_report</text>
-<text x="810" y="774" font-family="Segoe UI,Arial" font-size="8" fill="#166534" text-anchor="middle">Critical + confidence ≠ high → Sonnet→Haiku→GPT-4o→Ollama</text>
-<text x="810" y="786" font-family="Segoe UI,Arial" font-size="7.5" fill="#16A34A" text-anchor="middle">Consensus = (scorer + verifier) // 2 (floor pessimistic)</text>
-<text x="810" y="797" font-family="Segoe UI,Arial" font-size="7" fill="#16A34A" text-anchor="middle">Audit trail: verifier_score · consensus · reasoning</text>
+<text x="810" y="774" font-family="Segoe UI,Arial" font-size="8" fill="#166534" text-anchor="middle">Critical + confidence ≠ high → Advocate / Skeptic / Judge</text>
+<text x="810" y="786" font-family="Segoe UI,Arial" font-size="7.5" fill="#16A34A" text-anchor="middle">Model decides rounds (≤3) · local-only (Ollama, ADR-007)</text>
+<text x="810" y="797" font-family="Segoe UI,Arial" font-size="7" fill="#16A34A" text-anchor="middle">Audit trail: rounds · advocate/skeptic/judge · consensus</text>
 
 <!-- n8n -->
 <rect x="974" y="730" width="328" height="86" rx="6" fill="#F0FDF4" stroke="#86EFAC" stroke-width="1"/>
