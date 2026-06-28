@@ -6,31 +6,33 @@
 <title>Career Intelligence Platform — System Design (animated)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Josefin+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#0a0e1a; --surface:#111a2c; --surface2:#18233a; --line:#243049; --line2:#33425f;
-  --text:#e9eef8; --text2:#9fadc7; --text3:#62718f;
-  --teal:#2dd4bf; --purple:#a78bfa; --blue:#60a5fa; --amber:#fbbf24; --green:#4ade80; --red:#f87171; --orange:#fb923c;
-  --mono:'JetBrains Mono',ui-monospace,monospace; --sans:'Plus Jakarta Sans',system-ui,sans-serif;
+  /* Slate Intelligence palette — matches the redesigned app (muted, dark-default) */
+  --bg:#12161C; --surface:#181D25; --surface2:#1F2630; --line:#2C3542; --line2:#3B4554;
+  --text:#E5E9EF; --text2:#9AA5B5; --text3:#828D9E;
+  --teal:#7CB5AC; --purple:#A89BC0; --blue:#7FA6CC; --amber:#CFB573; --green:#8FB89E; --red:#CC8073; --orange:#CC9070;
+  --brand:#CFB573;
+  --mono:'JetBrains Mono',ui-monospace,monospace; --sans:'Josefin Sans',ui-sans-serif,system-ui,sans-serif; --display:'Fraunces',Georgia,'Times New Roman',serif;
 }
 *{box-sizing:border-box}
 html,body{margin:0}
-body{background:radial-gradient(1300px 700px at 50% -15%,#16223e 0%,var(--bg) 58%);color:var(--text);font-family:var(--sans);min-height:100vh;-webkit-font-smoothing:antialiased}
+body{background:radial-gradient(1300px 700px at 50% -15%,#27313F 0%,var(--bg) 58%);color:var(--text);font-family:var(--sans);min-height:100vh;-webkit-font-smoothing:antialiased}
 .wrap{max-width:1200px;margin:0 auto;padding:20px 22px 64px}
 .topbar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin-bottom:6px}
 .brand{font-size:13px;font-weight:700;letter-spacing:.3px;color:var(--text2)}
 .brand b{color:var(--text)}
 .navlinks a{font-size:12px;color:var(--text2);text-decoration:none;margin-left:14px;border-bottom:1px solid transparent;padding-bottom:2px}
 .navlinks a:hover{color:var(--text);border-color:var(--line2)}
-h1{font-size:clamp(24px,3.4vw,34px);font-weight:800;letter-spacing:-.6px;margin:10px 0 4px}
-h1 span{background:linear-gradient(90deg,var(--teal),var(--blue),var(--purple));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+h1{font-family:var(--display);font-size:clamp(26px,3.6vw,40px);font-weight:600;letter-spacing:-.5px;margin:10px 0 4px}
+h1 span{background:linear-gradient(90deg,var(--amber),var(--blue));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .sub{font-size:14px;color:var(--text2);max-width:760px;line-height:1.6;margin-bottom:16px}
 
 .board{display:grid;grid-template-columns:1fr 330px;gap:16px;align-items:stretch}
 @media(max-width:920px){.board{grid-template-columns:1fr}}
 
-.stage-wrap{background:linear-gradient(180deg,var(--surface) 0%,#0d1526 100%);border:1px solid var(--line);border-radius:16px;padding:10px;position:relative;overflow:hidden}
+.stage-wrap{background:linear-gradient(180deg,var(--surface) 0%,var(--bg) 100%);border:1px solid var(--line);border-radius:16px;padding:10px;position:relative;overflow:hidden}
 .stage{position:relative;width:100%;aspect-ratio:16/10.5;
   background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
   background-size:34px 34px;border-radius:11px}
@@ -48,9 +50,9 @@ h1 span{background:linear-gradient(90deg,var(--teal),var(--blue),var(--purple));
 .node .ic{font-size:16px;line-height:1}
 .node .t{font-family:var(--mono);font-size:11px;font-weight:700;margin-top:3px;color:var(--text);white-space:nowrap}
 .node .s{font-size:9.5px;color:var(--text3);margin-top:1px;white-space:nowrap}
-.node.on{border-color:var(--accent,var(--teal));box-shadow:0 0 0 1px var(--accent,var(--teal)),0 0 22px -2px var(--accent,var(--teal));transform:translate(-50%,-50%) scale(1.07);background:#1d2a44}
+.node.on{border-color:var(--accent,var(--teal));box-shadow:0 0 0 1px var(--accent,var(--teal)),0 0 22px -2px var(--accent,var(--teal));transform:translate(-50%,-50%) scale(1.07);background:#233040}
 .node.on .t{color:#fff}
-.node.lit{border-color:var(--accent);box-shadow:0 0 18px -3px var(--accent);background:#1d2a44}
+.node.lit{border-color:var(--accent);box-shadow:0 0 18px -3px var(--accent);background:#233040}
 .node.dim{opacity:.5}
 .node.fe{--accent:var(--blue)} .node.api{--accent:var(--purple)} .node.svc{--accent:var(--teal)}
 .node.lock{--accent:var(--green)} .node.agt{--accent:var(--blue)} .node.ph3{--accent:var(--amber)}
@@ -58,8 +60,8 @@ h1 span{background:linear-gradient(90deg,var(--teal),var(--blue),var(--purple));
 .node.local .t,.node.lock .t{color:var(--green)}
 .badge-local{position:absolute;top:-7px;right:-7px;font-size:8px;font-family:var(--mono);font-weight:700;background:var(--green);color:#06281a;border-radius:6px;padding:1px 4px}
 
-.packet{position:absolute;width:15px;height:15px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff,var(--teal) 70%);box-shadow:0 0 16px 4px rgba(45,212,191,.85);transform:translate(-50%,-50%);z-index:4;transition:left .75s cubic-bezier(.5,0,.25,1),top .75s cubic-bezier(.5,0,.25,1),background .4s,box-shadow .4s;left:8%;top:12%}
-.packet.cloud{background:radial-gradient(circle at 35% 35%,#fff,var(--purple) 70%);box-shadow:0 0 16px 4px rgba(167,139,250,.85)}
+.packet{position:absolute;width:15px;height:15px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff,var(--amber) 70%);box-shadow:0 0 16px 4px rgba(207,181,115,.7);transform:translate(-50%,-50%);z-index:4;transition:left .75s cubic-bezier(.5,0,.25,1),top .75s cubic-bezier(.5,0,.25,1),background .4s,box-shadow .4s;left:8%;top:12%}
+.packet.cloud{background:radial-gradient(circle at 35% 35%,#fff,var(--purple) 70%);box-shadow:0 0 16px 4px rgba(168,155,192,.7)}
 
 /* narration */
 .narr{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px;display:flex;flex-direction:column}
@@ -80,11 +82,11 @@ h1 span{background:linear-gradient(90deg,var(--teal),var(--blue),var(--purple));
 .controls{display:flex;align-items:center;gap:8px;margin:14px 0 8px;flex-wrap:wrap}
 .btn{background:var(--surface2);border:1px solid var(--line2);color:var(--text);font-family:var(--sans);font-size:13px;font-weight:600;padding:8px 13px;border-radius:9px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:.15s}
 .btn:hover{border-color:var(--teal);color:#fff}
-.btn.primary{background:var(--teal);color:#06302b;border-color:var(--teal)}
+.btn.primary{background:var(--amber);color:#12161C;border-color:var(--amber)}
 .btn.primary:hover{filter:brightness(1.08)}
 .dots{display:flex;gap:7px;margin-left:6px}
 .dot{width:9px;height:9px;border-radius:50%;background:var(--line2);cursor:pointer;transition:.2s}
-.dot.active{background:var(--teal);box-shadow:0 0 8px var(--teal);transform:scale(1.25)}
+.dot.active{background:var(--amber);box-shadow:0 0 8px var(--amber);transform:scale(1.25)}
 .dot.done{background:var(--text3)}
 .speed{margin-left:auto;font-size:12px;color:var(--text3);display:flex;align-items:center;gap:6px}
 .speed select{background:var(--surface2);border:1px solid var(--line2);color:var(--text);border-radius:7px;padding:5px 8px;font-family:var(--sans);font-size:12px;cursor:pointer}
@@ -98,7 +100,7 @@ h1 span{background:linear-gradient(90deg,var(--teal),var(--blue),var(--purple));
 .about{font-size:13.5px;color:var(--text2);line-height:1.75;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:15px 17px;margin:2px 0 18px}
 .about b{color:var(--text)}
 .about-links{margin-top:12px;display:flex;gap:9px;flex-wrap:wrap}
-.src-btn{display:inline-flex;align-items:center;gap:6px;background:var(--teal);color:#06302b;font-weight:700;font-size:12.5px;text-decoration:none;padding:8px 13px;border-radius:8px}
+.src-btn{display:inline-flex;align-items:center;gap:6px;background:var(--amber);color:#12161C;font-weight:700;font-size:12.5px;text-decoration:none;padding:8px 13px;border-radius:8px}
 .src-btn.ghost{background:transparent;color:var(--text2);border:1px solid var(--line2)}
 .src-btn:hover{filter:brightness(1.08)}
 .src-btn.ghost:hover{color:var(--text);border-color:var(--teal)}
@@ -107,7 +109,16 @@ h1 span{background:linear-gradient(90deg,var(--teal),var(--blue),var(--purple));
 <body>
 <div class="wrap">
   <div class="topbar">
-    <div class="brand"><b>Career Intelligence Platform</b> · System Design</div>
+    <div class="brand" style="display:flex;align-items:center;gap:9px">
+      <svg width="26" height="26" viewBox="0 0 56 56" aria-hidden="true" style="flex-shrink:0">
+        <circle cx="28" cy="28" r="26" fill="#181D25" stroke="#2C3542" stroke-width="2"/>
+        <path d="M28 6 L33 23 L28 28 L23 23 Z" fill="#CFB573"/>
+        <path d="M50 28 L33 33 L28 28 L33 23 Z" fill="#CC9070"/>
+        <path d="M28 50 L23 33 L28 28 L33 33 Z" fill="#8FB89E"/>
+        <path d="M6 28 L23 23 L28 28 L23 33 Z" fill="#7FA6CC"/>
+      </svg>
+      <span><b>Career Intelligence <span style="color:var(--brand)">Platform</span></b> · System Design</span>
+    </div>
     <div class="navlinks"><a href="case-study.html">Case study</a><a href="demos.html">Demos</a><a href="architecture.html">Architecture</a><a href="https://github.com/ragkv/Career-Intelligence-Platform">Source code ↗</a></div>
   </div>
   <h1>How a request flows through <span>the system</span></h1>
